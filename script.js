@@ -45,13 +45,13 @@ document.addEventListener('DOMContentLoaded', () => {
     function updateMockups(theme) {
         const suffix = theme === 'dark' ? 'dark-theme' : 'light-theme';
         if (heroMockup) {
-            heroMockup.src = `/landing_page/assets/images/device-mockup_${suffix}_hero.png`;
+            heroMockup.src = `./assets/images/device-mockup_${suffix}_hero.png`;
         }
         if (chatMockup) {
-            chatMockup.src = `/landing_page/assets/images/device-mockup_${suffix}_chat.png`;
+            chatMockup.src = `./assets/images/device-mockup_${suffix}_chat.png`;
         }
         if (practiceMockup) {
-            practiceMockup.src = `/landing_page/assets/images/device-mockup_${suffix}_practice.png`;
+            practiceMockup.src = `./assets/images/device-mockup_${suffix}_practice.png`;
         }
     }
 
