@@ -170,4 +170,29 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     });
+    // ===== POPOVER TOGGLE =====
+    const writeYoursBtn = document.getElementById('write-yours-btn');
+    const betaPopover = document.getElementById('beta-popover');
+
+    if (writeYoursBtn && betaPopover) {
+        writeYoursBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            e.stopPropagation();
+            betaPopover.classList.toggle('visible');
+        });
+
+        // Close popover when clicking anywhere else
+        document.addEventListener('click', (e) => {
+            if (betaPopover.classList.contains('visible') && !betaPopover.contains(e.target) && e.target !== writeYoursBtn) {
+                betaPopover.classList.remove('visible');
+            }
+        });
+
+        // Close on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && betaPopover.classList.contains('visible')) {
+                betaPopover.classList.remove('visible');
+            }
+        });
+    }
 });
