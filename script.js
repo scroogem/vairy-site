@@ -195,4 +195,36 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
+    // ===== SUPPORT FORM HANDLING =====
+    const supportForm = document.getElementById('support-form');
+    const successOverlay = document.getElementById('success-overlay');
+    const submitBtn = document.getElementById('submit-btn');
+
+    if (supportForm && successOverlay) {
+        supportForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            
+            // Show loading state
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
+
+            // Simulate server delay
+            setTimeout(() => {
+                // Hide form, show success
+                supportForm.style.display = 'none';
+                if (document.querySelector('.support-header')) {
+                    document.querySelector('.support-header').style.display = 'none';
+                }
+                successOverlay.style.display = 'block';
+                
+                // Add success animation classes
+                successOverlay.classList.add('reveal', 'active');
+
+                // Redirect to main page after 3 seconds
+                setTimeout(() => {
+                    window.location.href = './index.html';
+                }, 3000);
+            }, 1500);
+        });
+    }
 });
