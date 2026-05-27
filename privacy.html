@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-    <title>Privacy Policy - Vairy</title>
+    <title>Privacy Policy - Talky</title>
     <link rel="stylesheet" href="./styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="icon" type="image/png" href="./assets/images/favicon.png">
@@ -114,7 +114,7 @@
 <body>
     <nav>
         <div class="container nav-container">
-            <a href="./index.html" class="logo">VAIRY</a>
+            <a href="./index.html" class="logo">TALKY</a>
             <div class="nav-actions">
                 <button class="theme-toggle" id="theme-toggle" title="Toggle Theme">
                     <i class="fas fa-moon"></i>
@@ -127,54 +127,52 @@
         <a href="./index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Home</a>
 
         <div class="terms-content">
-            <h1>Vairy – Privacy Policy</h1>
-            <p class="last-updated">Last updated: 15 January 2026</p>
+            <h1>Talky – Privacy Policy</h1>
+            <p class="last-updated">Last updated: 27 May 2026</p>
 
-            <p>Vairy ("we", "our", "us") is committed to protecting your privacy. This Privacy Policy explains what personal data we collect, how we use it, and your rights regarding your data. By using the Vairy app, you agree to the practices described in this policy.</p>
+            <p>Talky ("we", "our", "us") is committed to protecting your privacy. This Privacy Policy explains what personal data we collect, how we use it, and your rights regarding your data. By using the Talky app, you agree to the practices described in this policy.</p>
 
             <h2>1. Data Controller</h2>
-            <p>Vairy is operated as an independent mobile application. For privacy-related inquiries, please contact us at <a href="mailto:contact@vairyapp.com">contact@vairyapp.com</a>.</p>
+            <p>Talky is operated as an independent mobile application. For privacy-related inquiries, please contact us at <a href="mailto:contact@talkyapp.com">contact@talkyapp.com</a>.</p>
 
             <h2>2. Data We Collect</h2>
-            <p>When you register and use Vairy, we collect the following personal data:</p>
+            <p>When you register and use Talky, we collect the following personal data:</p>
             <p><strong>Registration data:</strong></p>
             <ul>
                 <li>Full name</li>
                 <li>Email address</li>
                 <li>Password (stored in hashed/encrypted form; never stored in plain text)</li>
-                <li>Date of birth</li>
             </ul>
             <p><strong>Profile data:</strong></p>
             <ul>
-                <li>Profile photos</li>
-                <li>Interests and hobbies</li>
-                <li>Bio / personal description</li>
-                <li>Approximate location (city-level, used for matching)</li>
+                <li>Profile photo</li>
+                <li>Display name and bio</li>
             </ul>
             <p><strong>Usage and activity data:</strong></p>
             <ul>
-                <li>Swipe history and match interactions</li>
-                <li>Messages sent and received within the app</li>
-                <li>AI Practice session inputs and results</li>
+                <li>AI coaching session inputs, responses, and progress history</li>
+                <li>Practice scenario selections and results</li>
                 <li>App usage patterns and session data</li>
+                <li>In-app purchase and subscription status</li>
             </ul>
 
             <h2>3. How We Use Your Data</h2>
             <p>We use your personal data to:</p>
             <ul>
                 <li>Create and manage your account</li>
-                <li>Provide and improve matching functionality (including AI-assisted matching)</li>
-                <li>Enable messaging between matched users</li>
-                <li>Power the AI Practice (coach) feature, which analyzes your profile and interactions to generate personalized suggestions</li>
+                <li>Deliver and personalize the AI coach experience based on your progress and preferences</li>
+                <li>Track your improvement over time and generate personalized feedback</li>
+                <li>Process in-app purchases and manage subscription access</li>
+                <li>Send transactional emails (account verification, password reset)</li>
                 <li>Detect and prevent fraudulent or abusive behavior</li>
                 <li>Comply with legal obligations</li>
-                <li>Send you service-related notifications (no marketing emails without your explicit consent)</li>
             </ul>
 
             <h2>4. Automated Processing and AI Features</h2>
-            <p>4.1. Vairy uses algorithmic and AI-based systems to suggest potential matches based on your profile, location, and activity.<br>
-                4.2. The AI Practice feature processes data you share during sessions (text inputs, profile context) to generate coaching responses. This processing is powered by a third-party AI provider (Google Gemini). Data sent to this service is subject to Google's data processing terms.<br>
-                4.3. You have the right to request human review of decisions made solely by automated means that significantly affect you, in accordance with applicable law.</p>
+            <p>4.1. Talky's core feature is an AI-powered social skills coach. The coach processes data you share during sessions (your inputs, scenario choices, and profile context) to generate personalized guidance and feedback.<br>
+                4.2. This AI processing is powered by a third-party AI provider. Data sent to this service is limited to what is necessary for generating the coaching response and is subject to the provider's data processing terms.<br>
+                4.3. AI-generated suggestions are for self-improvement and educational purposes only. Talky does not guarantee specific outcomes.<br>
+                4.4. You have the right to request human review of decisions made solely by automated means that significantly affect you, in accordance with applicable law.</p>
 
             <h2>5. Data Storage and Security</h2>
             <p>5.1. All personal data is stored in a cloud-based PostgreSQL database (Supabase). Data is encrypted at rest and in transit using industry-standard protocols (TLS/SSL).<br>
@@ -188,26 +186,20 @@
             <ul>
                 <li>Supabase (PostgreSQL cloud database) – data storage and authentication</li>
                 <li>Upstash (Redis) – session and token management</li>
-                <li>Google Gemini API – AI feature processing (only data necessary for the feature is shared)</li>
+                <li>Resend – transactional email delivery (e.g. account verification, password reset)</li>
+                <li>Google (Sign in with Google) – authentication</li>
                 <li>Apple (Sign in with Apple) – authentication</li>
+                <li>Apple App Store – in-app purchase processing</li>
                 <li>Law enforcement or governmental authorities – when required by law</li>
             </ul>
             <p>All third-party providers are required to handle your data in accordance with applicable data protection laws.</p>
 
-            <h2>7. Location Data</h2>
-            <p>7.1. We collect your approximate location (at city level) to show you relevant matches in your area.<br>
-                7.2. We do not track your precise GPS location in the background.<br>
-                7.3. You may disable location access in your device settings, though this may limit matching functionality.</p>
+            <h2>7. Data Retention</h2>
+            <p>7.1. We retain your personal data for as long as your account is active.<br>
+                7.2. Upon account deletion, we will remove your personal data from our active systems within 30 days.<br>
+                7.3. Some data may be retained for a limited period in encrypted backups for legal or operational reasons, after which it will be permanently deleted.</p>
 
-            <h2>8. Messages and Communications</h2>
-            <p>Messages sent between users are stored in our database to deliver the messaging feature. Messages may be reviewed by our team if reported for abuse or required by law. We do not proactively read private messages.</p>
-
-            <h2>9. Data Retention</h2>
-            <p>9.1. We retain your personal data for as long as your account is active.<br>
-                9.2. Upon account deletion, we will remove your personal data from our active systems within 30 days.<br>
-                9.3. Some data may be retained for a limited period in encrypted backups for legal or operational reasons, after which it will be permanently deleted.</p>
-
-            <h2>10. Your Rights</h2>
+            <h2>8. Your Rights</h2>
             <p>Depending on your location, you may have the following rights:</p>
             <ul>
                 <li>Access – request a copy of the personal data we hold about you</li>
@@ -216,22 +208,22 @@
                 <li>Portability – receive your data in a structured, machine-readable format</li>
                 <li>Objection – object to automated decision-making or processing based on legitimate interests</li>
             </ul>
-            <p>To exercise any of these rights, please contact us at <a href="mailto:contact@vairyapp.com">contact@vairyapp.com</a>. We will respond within 30 days.</p>
+            <p>To exercise any of these rights, please contact us at <a href="mailto:contact@talkyapp.com">contact@talkyapp.com</a>. We will respond within 30 days.</p>
 
-            <h2>11. Children's Privacy</h2>
-            <p>Vairy is intended for users aged 18 and over. We do not knowingly collect personal data from individuals under 18. If we become aware that a user is under 18, we will immediately terminate their account and delete their data.</p>
+            <h2>9. Children's Privacy</h2>
+            <p>Talky is intended for users aged 18 and over. We do not knowingly collect personal data from individuals under 18. If we become aware that a user is under 18, we will immediately terminate their account and delete their data.</p>
 
-            <h2>12. Changes to This Policy</h2>
-            <p>We may update this Privacy Policy from time to time. The latest version will always be available at <a href="./privacy.html">vairyapp.com/privacy</a>. Where changes are significant, we will notify you in the app. Continued use of the Service after updates constitutes acceptance of the revised policy.</p>
+            <h2>10. Changes to This Policy</h2>
+            <p>We may update this Privacy Policy from time to time. The latest version will always be available in the app and on our website. Where changes are significant, we will notify you in the app. Continued use of the Service after updates constitutes acceptance of the revised policy.</p>
 
-            <h2>13. Contact</h2>
-            <p>For any questions, concerns, or data requests regarding this Privacy Policy, please contact us at: <a href="mailto:contact@vairyapp.com">contact@vairyapp.com</a></p>
+            <h2>11. Contact</h2>
+            <p>For any questions, concerns, or data requests regarding this Privacy Policy, please contact us at: <a href="mailto:contact@talkyapp.com">contact@talkyapp.com</a></p>
         </div>
     </div>
 
     <footer>
         <div class="container">
-            <p>&copy; 2026 Vairy. All rights reserved.</p>
+            <p>&copy; 2026 Talky. All rights reserved.</p>
             <div class="footer-links">
                 <a href="./terms.html">Terms</a>
                 <a href="./support.html">Support</a>

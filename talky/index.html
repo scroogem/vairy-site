@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Talky – Stop rehearsing. Start talking.</title>
+    <meta name="description"
+        content="Talky is your AI coach for social confidence. Practice real approaches, get instant feedback, become the person who actually goes for it.">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="./talky.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" type="image/png" href="../assets/images/favicon.png">
+</head>
+
+<body>
+
+    <nav>
+        <div class="container nav-container">
+            <a href="#" class="logo">TALKY</a>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="theme-toggle" title="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Teaser Section -->
+    <section class="teaser-section">
+        <div class="teaser-container">
+            <div class="typing-container teaser-typing">
+                <span id="typing-text"></span><span class="cursor">|</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Hero -->
+    <header class="hero">
+        <div class="hero-bg-overlay"></div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <h1 class="reveal">Stop rehearsing.<br>Start talking.</h1>
+                <p class="reveal">Talky is your AI coach for social confidence. Practice real approaches, get instant
+                    feedback, become the person who actually goes for it.</p>
+                <div class="cta-group reveal">
+                    <div class="popover-wrapper">
+                        <a href="#" class="btn btn-primary" id="write-yours-btn">Start training</a>
+                        <div class="popover" id="beta-popover">
+                            <div class="popover-content">
+                                <span class="popover-title">Join Beta</span>
+                                <a href="https://testflight.apple.com/join/PLACEHOLDER" class="btn-testflight"
+                                    target="_blank">
+                                    <i class="fab fa-apple"></i> TestFlight
+                                </a>
+                            </div>
+                            <div class="popover-arrow"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- AI Coach card -->
+            <div class="hero-coach-card reveal">
+                <div class="coach-phone">
+                    <div class="coach-header">
+                        <div class="coach-avatar">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="coach-info">
+                            <span class="coach-name">Talky Coach</span>
+                            <span class="coach-status"><span class="dot"></span>Online</span>
+                        </div>
+                        <div class="coach-badge">AI</div>
+                    </div>
+                    <div class="coach-messages">
+                        <div class="msg msg-coach anim-1">You see someone interesting. What do you say?</div>
+                        <div class="msg msg-user anim-2">Hey, I noticed your book — what are you reading?</div>
+                        <div class="feedback-chip good anim-3"><i class="fas fa-check"></i> Natural opener</div>
+                        <div class="msg msg-coach anim-4">Great! Genuine curiosity always works. Keep it going.</div>
+                        <div class="msg msg-user anim-5">Is it any good? I'm always looking for new reads.</div>
+                        <div class="feedback-chip great anim-6"><i class="fas fa-bolt"></i> Perfect follow-up</div>
+                        <div class="typing-indicator anim-7">
+                            <span></span><span></span><span></span>
+                        </div>
+                    </div>
+                    <div class="coach-input-bar">
+                        <span>Your response...</span>
+                        <button><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+
+                <!-- Floating stat pills -->
+                <div class="float-pill pill-1">
+                    <i class="fas fa-fire"></i>
+                    <span>7-day streak</span>
+                </div>
+                <div class="float-pill pill-2">
+                    <i class="fas fa-star"></i>
+                    <span>Confidence +42%</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Problem / Market gap -->
+    <section class="market-gap">
+        <div class="container">
+            <h2 class="reveal large-text">You know what to say.<br>You just never say it.</h2>
+            <div class="market-subtext reveal">
+                <p>The gap between thinking and doing is where confidence is built. Most people stay stuck in their
+                    heads.</p>
+                <p>Talky gets you out of your head and into the conversation.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid reveal">
+                <div class="stat-card">
+                    <span class="stat-number">12k+</span>
+                    <span class="stat-label">Approaches practiced</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">94%</span>
+                    <span class="stat-label">Feel more confident after 1 week</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">3 min</span>
+                    <span class="stat-label">Average daily practice</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" class="what-if">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>Built for the person<br>who's almost ready.</h2>
+            </div>
+            <div class="feature-grid">
+                <div class="feature-card reveal">
+                    <div class="feature-icon-wrap">
+                        <i class="fas fa-brain"></i>
+                    </div>
+                    <h3>AI Coach</h3>
+                    <p>Your personal coach available 24/7. Analyzes your approach, gives real feedback. No judgment. No
+                        awkwardness.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon-wrap">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Scenario Practice</h3>
+                    <p>Dozens of real-world situations. Practice until it feels natural. What happens here, stays here.
+                    </p>
+                </div>
+            </div>
+            <div class="feature-card reveal lone-feature">
+                <h3>Progress Tracking</h3>
+                <p>Watch your confidence grow. Week by week, approach by approach.
+                    The data doesn't lie — you're getting better.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="how-it-works">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>Three steps.<br>One habit.</h2>
+            </div>
+            <div class="steps-grid reveal">
+                <div class="step">
+                    <div class="step-number">01</div>
+                    <h3>Pick a scenario</h3>
+                    <p>Coffee shop, gym, street. Real-life situations. Talky sets the scene.</p>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step">
+                    <div class="step-number">02</div>
+                    <h3>Practice with AI</h3>
+                    <p>The AI plays the other person. You respond naturally. Get feedback on every line.</p>
+                </div>
+                <div class="step-connector"></div>
+                <div class="step">
+                    <div class="step-number">03</div>
+                    <h3>Do it for real</h3>
+                    <p>Confidence is built in reps. After enough practice, the real thing feels easy.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Manifesto -->
+    <section id="about" class="manifesto">
+        <div class="container">
+            <div class="manifesto-lines">
+                <p>Everyone's been nervous.</p>
+                <p>Everyone's hesitated.</p>
+                <p>Confidence is a skill.</p>
+                <p class="highlight">Talky is your gym.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section id="early-access" class="final-cta">
+        <div class="container">
+            <div class="reveal">
+                <h2>Your next conversation<br>starts here.</h2>
+                <div class="popover-wrapper">
+                    <a href="#" class="btn btn-primary" id="cta-btn">Start training</a>
+                    <div class="popover" id="cta-popover">
+                        <div class="popover-content">
+                            <span class="popover-title">Join Beta</span>
+                            <a href="https://testflight.apple.com/join/PLACEHOLDER" class="btn-testflight"
+                                target="_blank">
+                                <i class="fab fa-apple"></i> TestFlight
+                            </a>
+                        </div>
+                        <div class="popover-arrow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 Talky. All rights reserved.</p>
+            <div class="footer-links">
+                <a href="../terms.html">Terms</a>
+                <a href="../privacy.html">Privacy</a>
+                <a href="../support.html">Support</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
