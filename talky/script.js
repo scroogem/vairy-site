@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // ===== TYPING ANIMATION =====
-    // Phrases people think before approaching — fits the Talky concept
+    // Phrases people think before approaching — fits the Tryio concept
     const typingText = document.getElementById('typing-text');
     const phrases = [
         "I'll say something next time.",
