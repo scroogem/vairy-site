@@ -1,0 +1,27 @@
+# Vairy · Pixel Studio
+
+Static website for Aperto and the independent product work of Maksim Logvinov. Published through the existing GitHub Pages setup at vairyapp.com.
+
+Routes: `/` Aperto, `/me/` portfolio (`/m/` alias), `/projects/` catalog, `/tryio/` case study (`/talky/` alias), `/vairy/` archive. Existing support and privacy URLs remain available.
+
+## Build and preview
+
+```sh
+python3 tools/build_site.py
+python3 tools/check_site.py
+python3 -m http.server 57417 --bind 127.0.0.1
+```
+
+Edit page content in `site/pages/`. The build writes the static HTML files used by GitHub Pages. Shared styling, motion and assets live in `assets/site/`.
+
+## Beta access
+
+Set each product’s `testflight` in `site/products.json` to a real public `https://testflight.apple.com/join/…` URL, then run the build. Null means access is pending; Aperto offers direct email contact. No signup service or simulated form submission.
+
+## Motion and evidence
+
+Finite entrance animations, scroll-driven depth, a pointer focus frame and the interactive ASCII/photo shutter. The canvas caches photo and glyph layers; rendering stops while idle, offscreen or hidden. The OS reduced-motion preference is respected. There are no public animation settings.
+
+App imagery comes from actual app screenshots and existing product artifacts. See `assets/site/CREDITS.md`. Tryio’s exchange is explicitly illustrative. Claims and historical status are grounded in the inspected product source and professional CV.
+
+The build sources and internal product/design documentation are excluded from the GitHub Pages output in `_config.yml`.
