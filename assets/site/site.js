@@ -18,7 +18,7 @@ animate(hero?.querySelector('h1'), [
   {clipPath:'inset(0 0 18% 0)', transform:'translateY(16px)', opacity:.75},
   {clipPath:'inset(0)', transform:'translateY(0)', opacity:1}
 ], 950);
-animate(hero?.querySelector('.hero-device, .product-orbit, .conversation-study, .vairy-stage figure'), [
+animate(hero?.querySelector('.hero-device, .product-orbit, .tryio-artifact, .vairy-stage figure'), [
   {translate:'0 28px', opacity:.65, filter:'blur(3px)'},
   {translate:'0 0', opacity:1, filter:'blur(0)'}
 ], 1100, 100);
@@ -249,3 +249,43 @@ document.querySelectorAll('[data-decision]').forEach(button => button.addEventLi
     {duration:320,easing:'cubic-bezier(.16,1,.3,1)'});
 }));
 
+// A visual studio companion. No AI request, account or external script.
+const companion = document.querySelector('.site-companion');
+if (companion) {
+  const button = companion.querySelector('button');
+  const note = companion.querySelector('.companion-note');
+  const closeNote = () => {note.hidden=true;button.setAttribute('aria-expanded','false');};
+  button.addEventListener('click', () => {
+    note.hidden = !note.hidden;
+    button.setAttribute('aria-expanded',String(!note.hidden));
+    animate(note,[{opacity:.5,translate:'0 6px'},{opacity:1,translate:'0 0'}],230);
+  });
+  document.addEventListener('keydown', event => {if (event.key === 'Escape') closeNote();});
+  document.addEventListener('pointerdown', event => {if (!companion.contains(event.target)) closeNote();});
+  document.addEventListener('pointermove', event => {
+    if (!motion || event.pointerType === 'touch') return;
+    const box = button.getBoundingClientRect();
+    button.style.setProperty('--eye-x',`${Math.max(-1,Math.min(1,(event.clientX-box.left-box.width/2)/200))}px`);
+    button.style.setProperty('--eye-y',`${Math.max(-.5,Math.min(.5,(event.clientY-box.top-box.height/2)/300))}px`);
+  },{passive:true});
+  function walk() {
+    if (!motion || document.hidden) return;
+    button.classList.add('is-walking');
+    const journey = button.querySelector('svg').animate([{translate:'-8px 0'},{translate:'0 0'}],{duration:1800,easing});
+    animations.add(journey);
+    journey.finished.catch(()=>{}).finally(()=>{button.classList.remove('is-walking');animations.delete(journey);});
+  }
+  walk();
+  document.addEventListener('visibilitychange',()=>{if (document.hidden) {for (const animation of animations) animation.cancel();closeNote();}});
+  reducedMotion.addEventListener('change',()=>{button.style.setProperty('--eye-x','0px');button.style.setProperty('--eye-y','0px');});
+}
+
+const reel = document.querySelector('.screen-reel');
+reel?.addEventListener('keydown', event => {
+  if (!['ArrowLeft','ArrowRight'].includes(event.key)) return;
+  event.preventDefault();
+  const stride = reel.children[1].offsetLeft - reel.children[0].offsetLeft;
+  const next = Math.round(reel.scrollLeft / stride) + (event.key === 'ArrowRight' ? 1 : -1);
+  // Immediate keyboard steps remain deterministic even with repeated keys and Reduce Motion.
+  reel.scrollTo({left:next * stride,behavior:'auto'});
+});

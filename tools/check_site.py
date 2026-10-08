@@ -16,6 +16,7 @@ class Page(HTMLParser):
         if tag=='link' and attrs.get('rel')=='canonical':self.canonical.append(attrs['href'])
         for key in ('href','src'):
             if attrs.get(key):self.refs.append(attrs[key])
+        self.refs.extend('#'+value for value in attrs.get('aria-controls','').split())
         if tag not in ('area','base','br','col','embed','hr','img','input','link','meta','param','source','track','wbr'):self.stack.append(tag)
     def handle_endtag(self,tag):
         if not self.stack or self.stack[-1]!=tag:self.errors.append('Unexpected closing '+tag)

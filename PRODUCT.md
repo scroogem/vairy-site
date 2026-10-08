@@ -70,3 +70,11 @@ The user rejected Gallery/Stories/Modules as too restrained. Wants an emotional 
 
 ## Approved implementation, 2026-10-07
 Pixel Studio approved. Build the complete static website with root Aperto, /me/ portfolio, /m/ alias, /projects/, /tryio/ case and /vairy/ archive. Preserve existing support and legal routes. Use raw screenshots captured from the actual Aperto app; no App Store poster crops. Smooth finite entrances, scroll depth and shutter reveal; immediate focus reticle response. Remove all visible motion toggles and settings. Respect the operating system reduced-motion preference. TestFlight URLs remain pending and are configured in site/products.json.
+
+## Product artifacts and companion, 2026-10-08
+
+The user confirmed Tryio was formerly named Talky and supplied original assets in /Users/maks/Documents/VAIRY. The Tryio case now leads with the June 2026 release mockup and shows May 2026 raw captures of practice setup, coaching in chat and session summary. Preserve historical Talky branding inside those captures and label the chronology. No new image generation or photo editing.
+
+Vairy source inspected: Vairy - dating app prod ready full/VairyDatingApp/screens/ChatScreen.js, SwipeScreen.js, PracticeScreen.js, icebreakers.py and app.py/get_icebreakers. Profile context includes interests, distance and relationship intent. The chat loads interest-category questions; selecting a question fills the composer rather than sending automatically. Original February/May 2026 screenshots corroborate the flow. Practice with Coach & Partner existed alongside discovery and messaging. These are implemented product choices, not verified adoption or outcome claims.
+
+The user clarified the requested Claude Code bot is a visual pet/icon. Pending destination clarification, the active website scope is used: a small orange pixel companion called Claudie in reserved header space, a finite arrival walk, cursor-aware eyes and a page-specific note on click. No Claude software session, external AI service or user data transmission. The note contains authored, source-backed page facts. No visible motion settings; operating-system reduced motion is respected. Keyboard arrows move the original-screen reel by one complete screen.

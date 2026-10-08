@@ -21,6 +21,13 @@ PAGES = {
 }
 ARROW = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5"/></svg>'
 products = json.loads((ROOT/'site/products.json').read_text())
+COMPANION_NOTES = {
+    'aperto': 'The real camera interface is on the right. Open the image to switch between ASCII and the photograph.',
+    'me': 'Three independent products. Tryio went from idea to App Store, built solo. The cases show the decisions behind the screens.',
+    'projects': 'Each product opens its own page. Public beta links will appear when they are available.',
+    'tryio': 'Tryio started as Talky. Scroll down for the original practice, coaching and session-review screens.',
+    'vairy': 'A match is the beginning. The original chat shows interest-based prompts beside the message composer.',
+}
 for name, product in products.items():
     url = product['testflight']
     if url and not url.startswith('https://testflight.apple.com/join/'):
@@ -31,6 +38,12 @@ def render(page, route, title, description, body):
         active = page == name or (name == 'projects' and page in ('tryio','vairy'))
         return f'<a href="{href}"'+(' aria-current="page"' if active else '')+f'>{label}</a>'
     image = 'https://vairyapp.com/assets/site/aperto-icon.png'
+    companion = ''
+    if page in COMPANION_NOTES:
+        companion = f'''<aside class="site-companion" aria-label="Studio companion">
+    <div id="companion-note" class="companion-note" hidden><strong>Claudie</strong><p>{escape(COMPANION_NOTES[page])}</p></div>
+    <button class="companion-button" aria-label="Claudie: show a note about this page" aria-expanded="false" aria-controls="companion-note"><svg viewBox="0 0 24 18" aria-hidden="true"><path d="M6 4h12v9H6zM4 6h2v5H4zM18 6h2v5h-2zM1 4h3v2H1zM20 4h3v2h-3zM2 2h2v2H2zM20 2h2v2h-2z"/><path class="companion-legs-a" d="M5 12h2v4H5zM12 12h2v4h-2z"/><path class="companion-legs-b" d="M9 12h2v4H9zM17 12h2v4h-2z"/><path class="companion-eyes" d="M8 7h2v3H8zM14 7h2v3h-2z"/></svg></button>
+  </aside>'''
     return f'''<!doctype html>
 <html lang="en" data-page="{page}">
 <head>
@@ -57,7 +70,7 @@ def render(page, route, title, description, body):
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="header">
     <a class="brand" href="/" aria-label="Vairy — Aperto home">VAIRY<span aria-hidden="true"></span></a>
-    <nav aria-label="Main navigation">{nav('aperto','/','Aperto')}{nav('projects','/projects/','Projects')}{nav('me','/me/','Maksim')}</nav>
+{('    '+companion+chr(10)) if companion else ''}    <nav aria-label="Main navigation">{nav('aperto','/','Aperto')}{nav('projects','/projects/','Projects')}{nav('me','/me/','Maksim')}</nav>
     <a class="contact-link" href="mailto:shblknmaks@gmail.com">Let’s talk<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a>
     <span class="reading-progress" aria-hidden="true"></span>
   </header>
