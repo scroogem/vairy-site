@@ -3,3 +3,10 @@ serve.sh
 
 # macOS
 .DS_Store
+
+# Local design exploration and browser review captures
+.impeccable/questions/
+.impeccable/mocks/
+.impeccable/review/
+.impeccable/config.local.json
+tools/__pycache__/

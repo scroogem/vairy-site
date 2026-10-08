@@ -1,0 +1,687 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-08T11:56:13.639Z",
+  "title": "Design System: Vairy · Pixel Studio",
+  "extensions": {
+    "colorMeta": {
+      "orange": {
+        "role": "primary",
+        "displayName": "Shutter Orange",
+        "tonalRamp": [
+          "oklch(15% 0.1562 41.82)",
+          "oklch(26.43% 0.1562 41.82)",
+          "oklch(37.86% 0.1562 41.82)",
+          "oklch(49.29% 0.1562 41.82)",
+          "oklch(60.71% 0.1562 41.82)",
+          "oklch(72.14% 0.1562 41.82)",
+          "oklch(83.57% 0.1562 41.82)",
+          "oklch(95% 0.1562 41.82)"
+        ]
+      },
+      "cyan": {
+        "role": "primary",
+        "displayName": "Optical Cyan",
+        "tonalRamp": [
+          "oklch(15% 0.0779 209.26)",
+          "oklch(26.43% 0.0779 209.26)",
+          "oklch(37.86% 0.0779 209.26)",
+          "oklch(49.29% 0.0779 209.26)",
+          "oklch(60.71% 0.0779 209.26)",
+          "oklch(72.14% 0.0779 209.26)",
+          "oklch(83.57% 0.0779 209.26)",
+          "oklch(95% 0.0779 209.26)"
+        ]
+      },
+      "mint": {
+        "role": "secondary",
+        "displayName": "Action Mint",
+        "tonalRamp": [
+          "oklch(15% 0.1282 124.64)",
+          "oklch(26.43% 0.1282 124.64)",
+          "oklch(37.86% 0.1282 124.64)",
+          "oklch(49.29% 0.1282 124.64)",
+          "oklch(60.71% 0.1282 124.64)",
+          "oklch(72.14% 0.1282 124.64)",
+          "oklch(83.57% 0.1282 124.64)",
+          "oklch(95% 0.1282 124.64)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Pale Ink",
+        "tonalRamp": [
+          "oklch(15% 0.0204 276.96)",
+          "oklch(26.43% 0.0204 276.96)",
+          "oklch(37.86% 0.0204 276.96)",
+          "oklch(49.29% 0.0204 276.96)",
+          "oklch(60.71% 0.0204 276.96)",
+          "oklch(72.14% 0.0204 276.96)",
+          "oklch(83.57% 0.0204 276.96)",
+          "oklch(95% 0.0204 276.96)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "Muted Ink",
+        "tonalRamp": [
+          "oklch(15% 0.0544 275.78)",
+          "oklch(26.43% 0.0544 275.78)",
+          "oklch(37.86% 0.0544 275.78)",
+          "oklch(49.29% 0.0544 275.78)",
+          "oklch(60.71% 0.0544 275.78)",
+          "oklch(72.14% 0.0544 275.78)",
+          "oklch(83.57% 0.0544 275.78)",
+          "oklch(95% 0.0544 275.78)"
+        ]
+      },
+      "ground": {
+        "role": "neutral",
+        "displayName": "Indigo Ground",
+        "tonalRamp": [
+          "oklch(15% 0.0479 275.76)",
+          "oklch(26.43% 0.0479 275.76)",
+          "oklch(37.86% 0.0479 275.76)",
+          "oklch(49.29% 0.0479 275.76)",
+          "oklch(60.71% 0.0479 275.76)",
+          "oklch(72.14% 0.0479 275.76)",
+          "oklch(83.57% 0.0479 275.76)",
+          "oklch(95% 0.0479 275.76)"
+        ]
+      },
+      "surface": {
+        "role": "neutral",
+        "displayName": "Raised Indigo",
+        "tonalRamp": [
+          "oklch(15% 0.0606 273.40)",
+          "oklch(26.43% 0.0606 273.40)",
+          "oklch(37.86% 0.0606 273.40)",
+          "oklch(49.29% 0.0606 273.40)",
+          "oklch(60.71% 0.0606 273.40)",
+          "oklch(72.14% 0.0606 273.40)",
+          "oklch(83.57% 0.0606 273.40)",
+          "oklch(95% 0.0606 273.40)"
+        ]
+      },
+      "line": {
+        "role": "neutral",
+        "displayName": "Structural Line",
+        "tonalRamp": [
+          "oklch(15% 0.0628 274.03)",
+          "oklch(26.43% 0.0628 274.03)",
+          "oklch(37.86% 0.0628 274.03)",
+          "oklch(49.29% 0.0628 274.03)",
+          "oklch(60.71% 0.0628 274.03)",
+          "oklch(72.14% 0.0628 274.03)",
+          "oklch(83.57% 0.0628 274.03)",
+          "oklch(95% 0.0628 274.03)"
+        ]
+      },
+      "optical-ground": {
+        "role": "neutral",
+        "displayName": "Optical Ground",
+        "tonalRamp": [
+          "oklch(15% 0.0434 276.21)",
+          "oklch(26.43% 0.0434 276.21)",
+          "oklch(37.86% 0.0434 276.21)",
+          "oklch(49.29% 0.0434 276.21)",
+          "oklch(60.71% 0.0434 276.21)",
+          "oklch(72.14% 0.0434 276.21)",
+          "oklch(83.57% 0.0434 276.21)",
+          "oklch(95% 0.0434 276.21)"
+        ]
+      },
+      "ascii-ground": {
+        "role": "neutral",
+        "displayName": "ASCII Ground",
+        "tonalRamp": [
+          "oklch(15% 0.0454 274.56)",
+          "oklch(26.43% 0.0454 274.56)",
+          "oklch(37.86% 0.0454 274.56)",
+          "oklch(49.29% 0.0454 274.56)",
+          "oklch(60.71% 0.0454 274.56)",
+          "oklch(72.14% 0.0454 274.56)",
+          "oklch(83.57% 0.0454 274.56)",
+          "oklch(95% 0.0454 274.56)"
+        ]
+      },
+      "maker-lavender": {
+        "role": "tertiary",
+        "displayName": "Maker Lavender",
+        "tonalRamp": [
+          "oklch(15% 0.0522 275.64)",
+          "oklch(26.43% 0.0522 275.64)",
+          "oklch(37.86% 0.0522 275.64)",
+          "oklch(49.29% 0.0522 275.64)",
+          "oklch(60.71% 0.0522 275.64)",
+          "oklch(72.14% 0.0522 275.64)",
+          "oklch(83.57% 0.0522 275.64)",
+          "oklch(95% 0.0522 275.64)"
+        ]
+      },
+      "maker-ink": {
+        "role": "neutral",
+        "displayName": "Maker Ink",
+        "tonalRamp": [
+          "oklch(15% 0.0713 273.47)",
+          "oklch(26.43% 0.0713 273.47)",
+          "oklch(37.86% 0.0713 273.47)",
+          "oklch(49.29% 0.0713 273.47)",
+          "oklch(60.71% 0.0713 273.47)",
+          "oklch(72.14% 0.0713 273.47)",
+          "oklch(83.57% 0.0713 273.47)",
+          "oklch(95% 0.0713 273.47)"
+        ]
+      },
+      "tryio-peach": {
+        "role": "tertiary",
+        "displayName": "Tryio Peach",
+        "tonalRamp": [
+          "oklch(15% 0.0985 40.80)",
+          "oklch(26.43% 0.0985 40.80)",
+          "oklch(37.86% 0.0985 40.80)",
+          "oklch(49.29% 0.0985 40.80)",
+          "oklch(60.71% 0.0985 40.80)",
+          "oklch(72.14% 0.0985 40.80)",
+          "oklch(83.57% 0.0985 40.80)",
+          "oklch(95% 0.0985 40.80)"
+        ]
+      },
+      "tryio-peach-ink": {
+        "role": "neutral",
+        "displayName": "Peach Ink",
+        "tonalRamp": [
+          "oklch(15% 0.0576 285.01)",
+          "oklch(26.43% 0.0576 285.01)",
+          "oklch(37.86% 0.0576 285.01)",
+          "oklch(49.29% 0.0576 285.01)",
+          "oklch(60.71% 0.0576 285.01)",
+          "oklch(72.14% 0.0576 285.01)",
+          "oklch(83.57% 0.0576 285.01)",
+          "oklch(95% 0.0576 285.01)"
+        ]
+      },
+      "learning-mint": {
+        "role": "secondary",
+        "displayName": "Learning Mint",
+        "tonalRamp": [
+          "oklch(15% 0.1218 123.96)",
+          "oklch(26.43% 0.1218 123.96)",
+          "oklch(37.86% 0.1218 123.96)",
+          "oklch(49.29% 0.1218 123.96)",
+          "oklch(60.71% 0.1218 123.96)",
+          "oklch(72.14% 0.1218 123.96)",
+          "oklch(83.57% 0.1218 123.96)",
+          "oklch(95% 0.1218 123.96)"
+        ]
+      },
+      "learning-ink": {
+        "role": "neutral",
+        "displayName": "Learning Ink",
+        "tonalRamp": [
+          "oklch(15% 0.0453 265.59)",
+          "oklch(26.43% 0.0453 265.59)",
+          "oklch(37.86% 0.0453 265.59)",
+          "oklch(49.29% 0.0453 265.59)",
+          "oklch(60.71% 0.0453 265.59)",
+          "oklch(72.14% 0.0453 265.59)",
+          "oklch(83.57% 0.0453 265.59)",
+          "oklch(95% 0.0453 265.59)"
+        ]
+      },
+      "partner-paper": {
+        "role": "neutral",
+        "displayName": "Partner Paper",
+        "tonalRamp": [
+          "oklch(15% 0.0483 119.94)",
+          "oklch(26.43% 0.0483 119.94)",
+          "oklch(37.86% 0.0483 119.94)",
+          "oklch(49.29% 0.0483 119.94)",
+          "oklch(60.71% 0.0483 119.94)",
+          "oklch(72.14% 0.0483 119.94)",
+          "oklch(83.57% 0.0483 119.94)",
+          "oklch(95% 0.0483 119.94)"
+        ]
+      },
+      "human-surface": {
+        "role": "neutral",
+        "displayName": "Human Surface",
+        "tonalRamp": [
+          "oklch(15% 0.0543 268.63)",
+          "oklch(26.43% 0.0543 268.63)",
+          "oklch(37.86% 0.0543 268.63)",
+          "oklch(49.29% 0.0543 268.63)",
+          "oklch(60.71% 0.0543 268.63)",
+          "oklch(72.14% 0.0543 268.63)",
+          "oklch(83.57% 0.0543 268.63)",
+          "oklch(95% 0.0543 268.63)"
+        ]
+      },
+      "human-ink": {
+        "role": "neutral",
+        "displayName": "Human Ink",
+        "tonalRamp": [
+          "oklch(15% 0.0173 264.49)",
+          "oklch(26.43% 0.0173 264.49)",
+          "oklch(37.86% 0.0173 264.49)",
+          "oklch(49.29% 0.0173 264.49)",
+          "oklch(60.71% 0.0173 264.49)",
+          "oklch(72.14% 0.0173 264.49)",
+          "oklch(83.57% 0.0173 264.49)",
+          "oklch(95% 0.0173 264.49)"
+        ]
+      },
+      "catalog-mint": {
+        "role": "secondary",
+        "displayName": "Catalog Mint",
+        "tonalRamp": [
+          "oklch(15% 0.1242 124.14)",
+          "oklch(26.43% 0.1242 124.14)",
+          "oklch(37.86% 0.1242 124.14)",
+          "oklch(49.29% 0.1242 124.14)",
+          "oklch(60.71% 0.1242 124.14)",
+          "oklch(72.14% 0.1242 124.14)",
+          "oklch(83.57% 0.1242 124.14)",
+          "oklch(95% 0.1242 124.14)"
+        ]
+      },
+      "catalog-surface": {
+        "role": "neutral",
+        "displayName": "Catalog Surface",
+        "tonalRamp": [
+          "oklch(15% 0.0508 259.04)",
+          "oklch(26.43% 0.0508 259.04)",
+          "oklch(37.86% 0.0508 259.04)",
+          "oklch(49.29% 0.0508 259.04)",
+          "oklch(60.71% 0.0508 259.04)",
+          "oklch(72.14% 0.0508 259.04)",
+          "oklch(83.57% 0.0508 259.04)",
+          "oklch(95% 0.0508 259.04)"
+        ]
+      },
+      "button-ink": {
+        "role": "neutral",
+        "displayName": "Button Ink",
+        "tonalRamp": [
+          "oklch(15% 0.0426 292.98)",
+          "oklch(26.43% 0.0426 292.98)",
+          "oklch(37.86% 0.0426 292.98)",
+          "oklch(49.29% 0.0426 292.98)",
+          "oklch(60.71% 0.0426 292.98)",
+          "oklch(72.14% 0.0426 292.98)",
+          "oklch(83.57% 0.0426 292.98)",
+          "oklch(95% 0.0426 292.98)"
+        ]
+      },
+      "shutter-ink": {
+        "role": "neutral",
+        "displayName": "Shutter Ink",
+        "tonalRamp": [
+          "oklch(15% 0.0528 317.73)",
+          "oklch(26.43% 0.0528 317.73)",
+          "oklch(37.86% 0.0528 317.73)",
+          "oklch(49.29% 0.0528 317.73)",
+          "oklch(60.71% 0.0528 317.73)",
+          "oklch(72.14% 0.0528 317.73)",
+          "oklch(83.57% 0.0528 317.73)",
+          "oklch(95% 0.0528 317.73)"
+        ]
+      },
+      "phone-ground": {
+        "role": "neutral",
+        "displayName": "Phone Ground",
+        "tonalRamp": [
+          "oklch(15% 0.0176 277.90)",
+          "oklch(26.43% 0.0176 277.90)",
+          "oklch(37.86% 0.0176 277.90)",
+          "oklch(49.29% 0.0176 277.90)",
+          "oklch(60.71% 0.0176 277.90)",
+          "oklch(72.14% 0.0176 277.90)",
+          "oklch(83.57% 0.0176 277.90)",
+          "oklch(95% 0.0176 277.90)"
+        ]
+      },
+      "phone-frame": {
+        "role": "neutral",
+        "displayName": "Phone Frame",
+        "tonalRamp": [
+          "oklch(15% 0.0447 278.89)",
+          "oklch(26.43% 0.0447 278.89)",
+          "oklch(37.86% 0.0447 278.89)",
+          "oklch(49.29% 0.0447 278.89)",
+          "oklch(60.71% 0.0447 278.89)",
+          "oklch(72.14% 0.0447 278.89)",
+          "oklch(83.57% 0.0447 278.89)",
+          "oklch(95% 0.0447 278.89)"
+        ]
+      },
+      "editor-ground": {
+        "role": "neutral",
+        "displayName": "Editor Ground",
+        "tonalRamp": [
+          "oklch(15% 0.0639 275.56)",
+          "oklch(26.43% 0.0639 275.56)",
+          "oklch(37.86% 0.0639 275.56)",
+          "oklch(49.29% 0.0639 275.56)",
+          "oklch(60.71% 0.0639 275.56)",
+          "oklch(72.14% 0.0639 275.56)",
+          "oklch(83.57% 0.0639 275.56)",
+          "oklch(95% 0.0639 275.56)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Aperto pixel product name; responsive sizes are recorded in DESIGN.md."
+      },
+      "hero-promise": {
+        "displayName": "Hero Promise",
+        "purpose": "Onest promise beneath Aperto."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Shared expressive section headings."
+      },
+      "maker-display": {
+        "displayName": "Maker Display",
+        "purpose": "Onest maker name, paired with a Doto surname."
+      },
+      "work-title": {
+        "displayName": "Work Title",
+        "purpose": "Portfolio row product name."
+      },
+      "project-title": {
+        "displayName": "Project Title",
+        "purpose": "Catalog row product name."
+      },
+      "catalog-wordmark": {
+        "displayName": "Catalog Wordmark",
+        "purpose": "Tryio catalog artifact: 40px desktop, 28px at ≤800px, 18px at ≤540px."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Shared supporting copy; component-specific sizes remain in source."
+      },
+      "prose-body": {
+        "displayName": "Prose Body",
+        "purpose": "Legal and support reading; maximum 72ch."
+      },
+      "message": {
+        "displayName": "Message",
+        "purpose": "Illustrative partner and human messages."
+      },
+      "button": {
+        "displayName": "Button",
+        "purpose": "Primary square action label."
+      },
+      "navigation": {
+        "displayName": "Navigation",
+        "purpose": "Real static route navigation."
+      },
+      "chip": {
+        "displayName": "Chip",
+        "purpose": "Native product-decision controls."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Small annotations, captions, and status."
+      }
+    },
+    "shadows": [
+      {
+        "name": "hero-phone",
+        "value": "drop-shadow(17px 26px 24px #080b2580)",
+        "purpose": "CSS filter on the optical phone plane."
+      },
+      {
+        "name": "phone-frame",
+        "value": "0 0 0 2px #3b3e58",
+        "purpose": "App-screen box-shadow frame ring."
+      },
+      {
+        "name": "shutter",
+        "value": "0 14px 34px #0000004d",
+        "purpose": "Circular optical-action box shadow."
+      },
+      {
+        "name": "maker-phone",
+        "value": "drop-shadow(10px 25px 20px #303c692e)",
+        "purpose": "CSS filter on the lavender-stage Aperto artifact."
+      },
+      {
+        "name": "editor-phone",
+        "value": "drop-shadow(14px 21px 18px #080b255c)",
+        "purpose": "CSS filter on editor evidence."
+      },
+      {
+        "name": "lesson-phone",
+        "value": "drop-shadow(12px 24px 18px #060c2480)",
+        "purpose": "CSS filter on the learning planes."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(.16,1,.3,1)",
+        "purpose": "Source --ease token and Web Animations easing."
+      },
+      {
+        "name": "hero-type",
+        "value": "950ms",
+        "purpose": "Finite masked 16px type arrival."
+      },
+      {
+        "name": "hero-artifact",
+        "value": "1100ms; delay 100ms",
+        "purpose": "Finite 28px arrival resolving a 3px blur."
+      },
+      {
+        "name": "section-arrival",
+        "value": "850ms",
+        "purpose": "One-time intersection entrance."
+      },
+      {
+        "name": "sequential-arrival",
+        "value": "600ms; stagger 60ms",
+        "purpose": "Capability and format children; unobserved after arrival."
+      },
+      {
+        "name": "row-arrival",
+        "value": "800ms",
+        "purpose": "Finite masked row/release-fact arrival."
+      },
+      {
+        "name": "photo-position",
+        "value": "28ms time constant",
+        "purpose": "Native canvas aperture pointer smoothing; the focus frame itself follows immediately."
+      },
+      {
+        "name": "photo-reveal",
+        "value": "155ms time constant",
+        "purpose": "Shutter's full image reveal smoothing."
+      },
+      {
+        "name": "hover-aperture",
+        "value": "66px target radius; 60ms time constant",
+        "purpose": "Pointer focus aperture."
+      },
+      {
+        "name": "initial-scan",
+        "value": "1800ms maximum",
+        "purpose": "Finite first-arrival photo scan; no continuous scan loop."
+      },
+      {
+        "name": "canvas-resolution",
+        "value": "min(devicePixelRatio, 1.5)",
+        "purpose": "Photo/ASCII caches; glyph cells 10px, or 8px below 600px, row factor 1.23. rAF stops re-scheduling when settled, hidden or offscreen. No measured FPS claim."
+      },
+      {
+        "name": "scroll-depth",
+        "value": "factor .045; clamp −22px to 22px",
+        "purpose": "Scroll-driven phone travel; skips elements outside a 100px viewport margin."
+      },
+      {
+        "name": "maker-parallax",
+        "value": "x .025; y .02; transition 240ms",
+        "purpose": "Pointer-driven artifact group; touch excluded."
+      },
+      {
+        "name": "phone-transform",
+        "value": "200ms",
+        "purpose": "Optical plane responds to pointer position."
+      },
+      {
+        "name": "focus-opacity",
+        "value": "160ms",
+        "purpose": "50px frame visibility only; transform tracks immediately."
+      },
+      {
+        "name": "shutter",
+        "value": "350ms scale; 650ms iris; 250ms wash",
+        "purpose": "Deliberate hover, press and toggle response."
+      },
+      {
+        "name": "row-hover",
+        "value": "500ms move; 550ms wipe; 250ms arrow",
+        "purpose": "Broad editorial-row interaction."
+      },
+      {
+        "name": "tryio-swap",
+        "value": "330ms reply; 320ms decision",
+        "purpose": "Finite illustrative content changes."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "prefers-reduced-motion: reduce",
+        "purpose": "Cancels entrances; suppresses depth/pointer motion; hides reticle/progress; removes smooth scroll; makes the photograph reveal immediate. No public motion controls."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "compressed-desktop",
+        "value": "1100px"
+      },
+      {
+        "name": "tablet",
+        "value": "800px"
+      },
+      {
+        "name": "mobile",
+        "value": "540px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary action",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "The actual square orange email/page action; hover uses action mint.",
+      "html": "<a class=\"ds-btn\" href=\"mailto:help@vairyapp.com?subject=Aperto%20beta\">Ask about beta<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M5 12h14m-5-5 5 5-5 5\"/></svg></a>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;justify-content:space-between;gap:30px;background:var(--orange,#ff895a);color:#1b162c;min-height:50px;padding:14px 22px;font-family:var(--font,Onest,sans-serif);font-weight:600;font-size:13px;text-decoration:none;border-radius:0;transition:background .2s,transform .2s}.ds-btn:hover{background:var(--mint,#d0f291);transform:translateY(-2px)}.ds-btn svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}.ds-btn:focus-visible,.ds-link:focus-visible,.ds-shutter:focus-visible,.ds-chip:focus-visible,.ds-row:focus-visible,.ds-work:focus-visible,.ds-nav a:focus-visible,.ds-next:focus-visible{outline:3px solid var(--orange,#ff895a);outline-offset:5px}"
+    },
+    {
+      "name": "Underlined directional link",
+      "kind": "button",
+      "refersTo": "underlined-link",
+      "description": "Text and arrow joined by a current-color rule; the arrow responds to hover.",
+      "html": "<a class=\"ds-link\" href=\"/me/\">Meet Maksim<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M5 12h14m-5-5 5 5-5 5\"/></svg></a>",
+      "css": ".ds-link{display:inline-flex;align-items:center;gap:24px;font-family:var(--font,Onest,sans-serif);font-size:13px;color:var(--ink,#edf0ff);text-decoration:none;padding-bottom:7px;border-bottom:1px solid currentColor;margin-top:25px}.ds-link svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}.ds-link svg{transition:transform .2s}.ds-link:hover svg{transform:translateX(5px)}.ds-btn:focus-visible,.ds-link:focus-visible,.ds-shutter:focus-visible,.ds-chip:focus-visible,.ds-row:focus-visible,.ds-work:focus-visible,.ds-nav a:focus-visible,.ds-next:focus-visible{outline:3px solid var(--orange,#ff895a);outline-offset:5px}"
+    },
+    {
+      "name": "Main navigation",
+      "kind": "nav",
+      "refersTo": "navigation",
+      "description": "Static real route links with an orange current-page underline; contact disappears on compact layouts.",
+      "html": "<header class=\"ds-nav\"><a class=\"ds-brand\" href=\"/\">VAIRY<span aria-hidden=\"true\"></span></a><nav aria-label=\"Main navigation\"><a href=\"/\" aria-current=\"page\">Aperto</a><a href=\"/projects/\">Projects</a><a href=\"/me/\">Maksim</a></nav><a class=\"ds-contact\" href=\"mailto:shblknmaks@gmail.com\">Let’s talk<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M5 19 19 5M5 5h14v14\"/></svg></a></header>",
+      "css": ".ds-nav{height:82px;display:flex;align-items:center;gap:36px;padding:0 44px;background:var(--ground,#10132b);color:var(--ink,#edf0ff);font-family:var(--font,Onest,sans-serif)}.ds-nav a{color:inherit;text-decoration:none}.ds-brand{display:flex;align-items:center;gap:9px;font-size:23px;font-weight:800;letter-spacing:-.04em}.ds-brand span{height:7px;width:7px;background:var(--orange,#ff895a)}.ds-nav nav{display:flex;align-items:center;gap:30px;margin:auto;font-size:13px}.ds-nav nav a{padding:12px 0}.ds-nav a[aria-current=page]{text-decoration:underline;text-decoration-color:var(--orange,#ff895a);text-decoration-thickness:2px;text-underline-offset:6px}.ds-nav a:hover{color:var(--orange,#ff895a)}.ds-contact{display:flex;align-items:center;gap:14px;font-size:13px}.ds-nav svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}.ds-contact svg{width:17px;height:17px}@media(max-width:1100px){.ds-nav{padding:0 30px}}@media(max-width:800px){.ds-nav{height:70px;padding:0 24px;gap:24px}.ds-contact{display:none}.ds-brand{font-size:21px}.ds-nav nav{margin:0 0 0 auto;gap:24px;font-size:12px}}@media(max-width:540px){.ds-nav{height:64px;padding:0 20px;gap:20px}.ds-brand{font-size:19px;gap:7px}.ds-nav nav{gap:19px;font-size:12px}}.ds-btn:focus-visible,.ds-link:focus-visible,.ds-shutter:focus-visible,.ds-chip:focus-visible,.ds-row:focus-visible,.ds-work:focus-visible,.ds-nav a:focus-visible,.ds-next:focus-visible{outline:3px solid var(--orange,#ff895a);outline-offset:5px}"
+    },
+    {
+      "name": "Optical shutter",
+      "kind": "custom",
+      "refersTo": "shutter",
+      "description": "Actual iris control with hover, press, focus and aria-pressed styling. The live site uses native canvas for its reveal; this snippet demonstrates the CSS control.",
+      "html": "<button class=\"ds-shutter\" aria-label=\"Reveal the color photograph\" aria-pressed=\"false\"><span class=\"ds-iris\" aria-hidden=\"true\"><svg viewBox=\"0 0 80 80\"><circle cx=\"40\" cy=\"40\" r=\"29\"/><path d=\"m40 11 17 29-17 29M15 25h34l16 30M15 55l17-30h33\"/></svg></span></button>",
+      "css": ".ds-shutter{display:flex;align-items:center;justify-content:center;border:0;padding:0;width:90px;height:90px;border-radius:50%;background:var(--orange,#ff895a);color:#2a1730;cursor:pointer;box-shadow:0 14px 34px #0000004d;transition:transform .35s cubic-bezier(.16,1,.3,1),background .35s}.ds-shutter:hover{transform:scale(1.08)}.ds-shutter:active{transform:scale(.94)}.ds-iris{display:flex;transform:rotate(0);transition:transform .65s cubic-bezier(.16,1,.3,1)}.ds-iris svg{width:70px;height:70px;fill:none;stroke:currentColor;stroke-width:1.4;stroke-linecap:round;stroke-linejoin:round}.ds-shutter[aria-pressed=true]{background:var(--mint,#d0f291)}.ds-shutter[aria-pressed=true] .ds-iris{transform:rotate(60deg)}.ds-shutter:disabled{opacity:.55;cursor:default}@media(max-width:1100px){.ds-shutter{width:72px;height:72px}.ds-iris svg{width:56px;height:56px}}@media(max-width:800px){.ds-shutter{width:76px;height:76px}}@media(max-width:540px){.ds-shutter{width:64px;height:64px}.ds-iris svg{width:49px;height:49px}}@media(prefers-reduced-motion:reduce){.ds-shutter,.ds-iris{transition:none}}.ds-btn:focus-visible,.ds-link:focus-visible,.ds-shutter:focus-visible,.ds-chip:focus-visible,.ds-row:focus-visible,.ds-work:focus-visible,.ds-nav a:focus-visible,.ds-next:focus-visible{outline:3px solid var(--orange,#ff895a);outline-offset:5px}"
+    },
+    {
+      "name": "Product decision controls",
+      "kind": "chip",
+      "refersTo": "decision-chip",
+      "description": "Outlined native buttons use aria-pressed; the active decision is cyan.",
+      "html": "<div class=\"ds-chips\" role=\"group\" aria-label=\"Tryio product decisions\"><button class=\"ds-chip\" aria-pressed=\"true\">Start with context</button><button class=\"ds-chip\" aria-pressed=\"false\">Let the user lead</button><button class=\"ds-chip\" aria-pressed=\"false\">Separate the feedback</button><button class=\"ds-chip\" aria-pressed=\"false\">Measure practice</button></div>",
+      "css": ".ds-chips{display:flex;gap:9px;flex-wrap:wrap;margin-bottom:42px}.ds-chip{font-family:var(--font,Onest,sans-serif);font-size:12px;color:var(--ink,#edf0ff);background:transparent;border:1px solid var(--line,#41496e);padding:13px 17px;border-radius:4px;cursor:pointer}.ds-chip[aria-pressed=true]{color:var(--ground,#10132b);background:var(--cyan,#8cd9e6);border-color:var(--cyan,#8cd9e6)}.ds-chip:hover{border-color:var(--cyan,#8cd9e6)}@media(max-width:540px){.ds-chips{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:28px}.ds-chip{padding:13px 10px;font-size:11px;line-height:1.5}}.ds-btn:focus-visible,.ds-link:focus-visible,.ds-shutter:focus-visible,.ds-chip:focus-visible,.ds-row:focus-visible,.ds-work:focus-visible,.ds-nav a:focus-visible,.ds-next:focus-visible{outline:3px solid var(--orange,#ff895a);outline-offset:5px}"
+    },
+    {
+      "name": "Catalog row and Tryio wordmark",
+      "kind": "custom",
+      "refersTo": "project-row",
+      "description": "Broad whole-row link with the final 40/28/18px responsive pixel artifact and a left-to-right hover wipe.",
+      "html": "<a class=\"ds-row\" href=\"/tryio/\"><span class=\"ds-art\" aria-hidden=\"true\">Tryio.</span><div class=\"ds-copy\"><h2>Tryio</h2><p>Practice conversations. Get specific feedback. Try again.</p><span>Historical product case study</span></div><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M5 19 19 5M5 5h14v14\"/></svg></a>",
+      "css": ".ds-row{display:grid;grid-template-columns:200px 1fr auto;gap:70px;padding:34px 0;border-top:1px solid var(--line,#41496e);align-items:center;position:relative;isolation:isolate;color:var(--ink,#edf0ff);font-family:var(--font,Onest,sans-serif);text-decoration:none;transition:transform .5s cubic-bezier(.16,1,.3,1)}.ds-row::before{content:'';position:absolute;inset:0 -22px;z-index:-1;background:var(--surface,#1a2040);clip-path:inset(0 100% 0 0);transition:clip-path .55s cubic-bezier(.16,1,.3,1)}.ds-row:hover::before{clip-path:inset(0)}.ds-row:hover{transform:translateX(6px)}.ds-art{height:180px;display:flex;align-items:center;justify-content:center;overflow:hidden;font-family:var(--display,Doto,Onest,sans-serif);font-size:40px;font-weight:700;color:#d2f294;background:#1c2c45}.ds-copy h2{margin:0;font-size:56px;font-weight:500;letter-spacing:-.035em;line-height:1.04}.ds-copy p{margin:18px 0 0;color:var(--muted,#b5bde3);font-size:16px;line-height:1.55}.ds-copy>span{display:block;font-size:11px;color:var(--cyan,#8cd9e6);margin-top:18px}.ds-row svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}.ds-row>svg{width:38px;height:38px;transition:transform .25s}.ds-row:hover h2{color:var(--orange,#ff895a)}.ds-row:hover>svg{transform:translate(4px,-4px)}@media(max-width:1100px){.ds-row{grid-template-columns:160px 1fr auto;gap:45px}.ds-art{height:160px}}@media(max-width:800px){.ds-row{grid-template-columns:130px 1fr auto;gap:25px}.ds-art{height:150px;font-size:28px}.ds-copy h2{font-size:45px}.ds-copy p{font-size:14px}}@media(max-width:540px){.ds-row{grid-template-columns:78px 1fr 20px;gap:20px;padding:29px 0}.ds-art{height:115px;font-size:18px}.ds-copy h2{font-size:36px}.ds-copy p{font-size:13px;margin-top:13px;line-height:1.5}.ds-copy>span{font-size:11px;line-height:1.5;margin-top:15px}.ds-row>svg{width:20px;height:20px}}@media(prefers-reduced-motion:reduce){.ds-row,.ds-row::before,.ds-row>svg{transition:none}}.ds-btn:focus-visible,.ds-link:focus-visible,.ds-shutter:focus-visible,.ds-chip:focus-visible,.ds-row:focus-visible,.ds-work:focus-visible,.ds-nav a:focus-visible,.ds-next:focus-visible{outline:3px solid var(--orange,#ff895a);outline-offset:5px}"
+    },
+    {
+      "name": "Portfolio work row",
+      "kind": "custom",
+      "refersTo": "work-row",
+      "description": "Product name, concrete facts and directional arrow form a bordered native link.",
+      "html": "<a class=\"ds-work\" href=\"/tryio/\"><div class=\"ds-work-title\"><h3>Tryio</h3><span>Solo journey from idea to App Store</span></div><p>Contextual practice.<br>Specific feedback.<br>Completed sessions as the core metric.</p><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M5 19 19 5M5 5h14v14\"/></svg></a>",
+      "css": ".ds-work{display:grid;grid-template-columns:1fr 1fr auto;gap:60px;align-items:center;border-top:1px solid var(--line,#41496e);padding:36px 0;position:relative;isolation:isolate;color:var(--ink,#edf0ff);font-family:var(--font,Onest,sans-serif);text-decoration:none;transition:transform .5s cubic-bezier(.16,1,.3,1)}.ds-work::before{content:'';position:absolute;inset:0 -22px;z-index:-1;background:var(--surface,#1a2040);clip-path:inset(0 100% 0 0);transition:clip-path .55s cubic-bezier(.16,1,.3,1)}.ds-work:hover::before{clip-path:inset(0)}.ds-work:hover{transform:translateX(6px)}.ds-work-title h3{margin:0;font-size:48px;font-weight:500;letter-spacing:-.035em;line-height:1.04}.ds-work-title span{font-size:12px;color:var(--muted,#b5bde3);display:block;margin-top:15px}.ds-work>p{margin:0;font-size:15px;color:var(--muted,#b5bde3);line-height:1.8}.ds-work svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}.ds-work>svg{width:34px;height:34px;transition:transform .25s}.ds-work:hover>svg{transform:translate(4px,-4px)}.ds-work:hover h3{color:var(--orange,#ff895a)}@media(max-width:800px){.ds-work{gap:32px}.ds-work-title h3{font-size:39px}.ds-work>p{font-size:13px}}@media(max-width:540px){.ds-work{grid-template-columns:1fr auto;padding:28px 0;gap:20px}.ds-work-title h3{font-size:42px}.ds-work-title span{font-size:11px;line-height:1.5;margin-top:13px}.ds-work>p{grid-column:1;grid-row:2;font-size:13px;line-height:1.7}.ds-work>svg{grid-column:2;grid-row:1;width:28px;height:28px}}@media(prefers-reduced-motion:reduce){.ds-work,.ds-work::before,.ds-work>svg{transition:none}}.ds-btn:focus-visible,.ds-link:focus-visible,.ds-shutter:focus-visible,.ds-chip:focus-visible,.ds-row:focus-visible,.ds-work:focus-visible,.ds-nav a:focus-visible,.ds-next:focus-visible{outline:3px solid var(--orange,#ff895a);outline-offset:5px}"
+    },
+    {
+      "name": "Illustrative conversation study",
+      "kind": "card",
+      "refersTo": "conversation-card",
+      "description": "The actual Tryio learning demonstration, explicitly labeled illustrative; live-site text swaps are JavaScript enhancements.",
+      "html": "<div class=\"ds-study\"><div class=\"ds-study-top\"><strong>Coach & Partner</strong><span>Illustrative exchange</span></div><div class=\"ds-messages\"><p class=\"ds-partner\">Hey.</p><p class=\"ds-human\">How’s your day going?</p><div class=\"ds-coach\"><strong>Coach</strong><p>Give them a detail to respond to. Try sharing something about your day, then asking about theirs.</p></div></div><button class=\"ds-next\">Try a more specific reply<svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path d=\"M5 12h14m-5-5 5 5-5 5\"/></svg></button></div>",
+      "css": ".ds-study{background:#d1f094;color:#1c263d;border-radius:12px;padding:26px;position:relative;overflow:hidden;font-family:var(--font,Onest,sans-serif)}.ds-study-top{display:flex;align-items:center;justify-content:space-between;gap:18px;font-size:12px;padding-bottom:22px;border-bottom:1px solid #647b486e}.ds-study-top>span{font-size:11px;color:#4c6041}.ds-messages{min-height:305px;display:flex;flex-direction:column;gap:18px;padding:28px 0}.ds-messages>p,.ds-coach{margin:0;padding:15px 18px;border-radius:12px;font-size:14px;line-height:1.5;max-width:87%}.ds-partner{background:#ecf6d2;align-self:flex-start}.ds-human{background:#242e4b;color:#edf3ff;align-self:flex-end}.ds-coach{background:transparent;border:1px solid #667f4a;max-width:100%}.ds-coach strong{font-size:11px;font-weight:600;display:block;margin-bottom:10px}.ds-coach p{margin:0;line-height:1.55}.ds-next{display:flex;justify-content:space-between;align-items:center;width:100%;gap:20px;padding:17px 0 0;border:0;border-top:1px solid #647b486e;background:transparent;color:inherit;font-family:inherit;font-size:12px;cursor:pointer}.ds-next svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}@media(max-width:1100px){.ds-study{padding:23px}}@media(max-width:800px){.ds-study{max-width:640px}}@media(max-width:540px){.ds-study{padding:21px}.ds-study-top{font-size:11px;gap:14px}.ds-study-top>span{text-align:right}.ds-study-top strong{max-width:100px;line-height:1.5}.ds-messages{min-height:280px;gap:16px;padding:22px 0}.ds-messages>p,.ds-coach{font-size:13px;padding:13px 15px;max-width:91%}.ds-coach{max-width:100%}.ds-next{font-size:11px;line-height:1.5;padding-top:15px}}.ds-btn:focus-visible,.ds-link:focus-visible,.ds-shutter:focus-visible,.ds-chip:focus-visible,.ds-row:focus-visible,.ds-work:focus-visible,.ds-nav a:focus-visible,.ds-next:focus-visible{outline:3px solid var(--orange,#ff895a);outline-offset:5px}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Pixel Studio",
+    "overview": "Pixel Studio makes independent product work feel physical: an indigo optical stage, a lavender maker stage, a warm shutter, a mint learning demonstration, and broad editorial project rows. Doto gives names and selected phrases a pixel texture; Onest carries promises, facts, controls, and reading.\n\nReal product artifacts lead the composition. Full app screens occupy tilted planes, a photograph becomes ASCII, and the shutter opens the photograph from the pointer. Depth comes from perspective, finite arrivals, scroll position, and direct interaction. The approved working Pixel Studio is the authority for this implementation.",
+    "keyCharacteristics": [
+      "Pixel display lettering paired with clear supporting type.",
+      "Indigo ground with lavender, orange, mint, cyan, and peach used for distinct roles.",
+      "Whole genuine app screens, existing photographs, and explicitly labeled illustrations.",
+      "Broad bordered rows, restrained corner rounding, and a circular shutter.",
+      "Finite entrances and scroll or pointer-driven depth."
+    ],
+    "rules": [
+      {
+        "name": "Artifact Truth",
+        "body": "Use genuine product artifacts and existing credited photography. Preserve whole Aperto interfaces; label the Tryio exchange as illustrative.",
+        "section": "elevation"
+      },
+      {
+        "name": "Pixel Emphasis",
+        "body": "Use Doto for product names and selected expressive phrases. Keep facts, controls, navigation, and reading in Onest.",
+        "section": "typography"
+      },
+      {
+        "name": "Driven Motion",
+        "body": "Motion follows entrance, scroll, pointer, or a deliberate action. Do not add perpetual float loops or public motion settings; honor the operating system preference.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do preserve the approved Pixel Studio composition and the distinct optical, maker, and learning stages.",
+      "Do show the entire raw Aperto interface with contain sizing and the existing phone proportions.",
+      "Do keep real navigation and content usable without JavaScript.",
+      "Do use the source breakpoints and preserve the Tryio catalog wordmark at 40px, 28px, and 18px.",
+      "Do keep keyboard focus visible and respect operating system reduced motion.",
+      "Do preserve pending beta status until a real public URL is provided and verified.",
+      "Do keep Tryio illustrations labeled, its closed experiment status explicit, and product claims grounded in evidence."
+    ],
+    "donts": [
+      "Don't introduce AI-generated photography, fabricated screenshots, or App Store poster crops.",
+      "Don't imply that the credited demo photographs were shot with Aperto.",
+      "Don't add perpetual floating animations, visible motion toggles, or motion settings.",
+      "Don't convert the static routes into PJAX, an SPA, or a View Transition navigation system.",
+      "Don't invent active store access, growth results, validated confidence improvement, or engineering employment.",
+      "Don't use the registration-speed reduction claim as an achievement.",
+      "Don't treat the inherited buildPath=comp setting as evidence of a generated comp for this implementation."
+    ]
+  }
+}
+

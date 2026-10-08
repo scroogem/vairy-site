@@ -1,38 +1,4 @@
-<!doctype html>
-<html lang="en" data-page="aperto">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#10132b">
-  <title>Aperto — Make it yours.</title>
-  <meta name="description" content="A free manual iPhone camera. ISO, shutter, white balance, focus, Natural RAW and practical photography lessons.">
-  <link rel="canonical" href="https://vairyapp.com/">
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Aperto — Make it yours.">
-  <meta property="og:description" content="A free manual iPhone camera. ISO, shutter, white balance, focus, Natural RAW and practical photography lessons.">
-  <meta property="og:url" content="https://vairyapp.com/">
-  <meta property="og:image" content="https://vairyapp.com/assets/site/aperto-icon.png">
-  <meta name="twitter:card" content="summary">
-  <link rel="icon" type="image/png" href="/assets/site/aperto-icon.png">
-  <link rel="preload" href="/assets/site/font-2.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="preload" href="/assets/site/doto-font.ttf" as="font" type="font/ttf" crossorigin>
-  <link rel="stylesheet" href="/assets/site/fonts.css">
-  <link rel="stylesheet" href="/assets/site/site.css">
-  <script src="/assets/site/site.js" defer></script>
-</head>
-<body>
-  <a class="skip-link" href="#main">Skip to content</a>
-  <header class="header">
-    <a class="brand" href="/" aria-label="Vairy — Aperto home">VAIRY<span aria-hidden="true"></span></a>
-    <aside class="site-companion" aria-label="Studio companion">
-    <div id="companion-note" class="companion-note" hidden><strong>Claudie</strong><p>The real camera interface is on the right. Open the image to switch between ASCII and the photograph.</p></div>
-    <button class="companion-button" aria-label="Claudie: show a note about this page" aria-expanded="false" aria-controls="companion-note"><svg viewBox="0 0 24 18" aria-hidden="true"><path d="M6 4h12v9H6zM4 6h2v5H4zM18 6h2v5h-2zM1 4h3v2H1zM20 4h3v2h-3zM2 2h2v2H2zM20 2h2v2h-2z"/><path class="companion-legs-a" d="M5 12h2v4H5zM12 12h2v4h-2z"/><path class="companion-legs-b" d="M9 12h2v4H9zM17 12h2v4h-2z"/><path class="companion-eyes" d="M8 7h2v3H8zM14 7h2v3h-2z"/></svg></button>
-  </aside>
-    <nav aria-label="Main navigation"><a href="/" aria-current="page">Aperto</a><a href="/projects/">Projects</a><a href="/me/">Maksim</a></nav>
-    <a class="contact-link" href="mailto:shblknmaks@gmail.com">Let’s talk<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a>
-    <span class="reading-progress" aria-hidden="true"></span>
-  </header>
-  <main id="main"><section class="optical-stage" aria-label="Aperto interactive photo study">
+<section class="optical-stage" aria-label="Aperto interactive photo study">
         <img class="photo-fallback" src="/assets/site/mountain.jpg" width="2000" height="2667" alt="">
         <canvas id="ascii-field" aria-hidden="true"></canvas>
         <div class="stage-shade" aria-hidden="true"></div>
@@ -72,8 +38,4 @@
         </section>
         <section class="format-strip section"><span>Natural RAW</span><span>Night & macro</span><span>Film looks</span><span>Camera Control</span><span>iOS 17+</span><p>Formats and Camera Control depend on your iPhone.</p></section>
         <section class="maker-strip section"><p>Built by an independent product maker.</p><a href="/me/">Meet Maksim<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 19 19 5M5 5h14v14"/></svg></a></section>
-      <section id="beta" class="beta section"><h2>See what’s next.</h2><div><p>The public TestFlight link is on its way.<br>Every photography tool is free.</p><a class="button" href="mailto:help@vairyapp.com?subject=Aperto%20beta">Ask about beta<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></a></div></section>
-</main>
-  <footer class="footer"><a href="/me/">Made by Maksim Logvinov.</a><div><a href="/support.html">Support</a><a href="/aperto/privacy.html">Aperto privacy</a><a href="/privacy.html">Tryio privacy</a><a href="/terms.html">Terms</a></div><span>© 2026 Vairy</span></footer>
-</body>
-</html>
+      <section id="beta" class="beta section"><h2>See what’s next.</h2><div><p>The public TestFlight link is on its way.<br>Every photography tool is free.</p><a class="button" href="{{aperto_beta_url}}">{{aperto_beta_label}}<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></a></div></section>
