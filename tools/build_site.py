@@ -3,9 +3,11 @@
 from pathlib import Path
 from html import escape
 from datetime import date
+from hashlib import sha256
 import json
 
 ROOT = Path(__file__).resolve().parents[1]
+ASSET_VERSIONS = {name: sha256((ROOT/'assets/site'/name).read_bytes()).hexdigest()[:10] for name in ('site.css', 'site.js')}
 PAGES = {
     'aperto': ('index.html', '/', 'Aperto — Make it yours.', 'A free manual iPhone camera. ISO, shutter, white balance, focus, Natural RAW and practical photography lessons.'),
     'me': ('me/index.html', '/me/', 'Maksim Logvinov — Independent product builder', 'Product thinking made tangible. Independent apps, product decisions and the work of Maksim Logvinov. Based in France.'),
@@ -37,7 +39,8 @@ def render(page, route, title, description, body):
     def nav(name, href, label):
         active = page == name or (name == 'projects' and page in ('tryio','vairy'))
         return f'<a href="{href}"'+(' aria-current="page"' if active else '')+f'>{label}</a>'
-    image = 'https://vairyapp.com/assets/site/aperto-icon.png'
+    icon = 'tryio-icon.png' if page in ('tryio','privacy','terms') else 'aperto-icon.png'
+    image = 'https://vairyapp.com/assets/site/' + icon
     companion = ''
     if page in COMPANION_NOTES:
         companion = f'''<aside class="site-companion" aria-label="Studio companion">
@@ -59,12 +62,12 @@ def render(page, route, title, description, body):
   <meta property="og:url" content="https://vairyapp.com{route}">
   <meta property="og:image" content="{image}">
   <meta name="twitter:card" content="summary">
-  <link rel="icon" type="image/png" href="/assets/site/aperto-icon.png">
+  <link rel="icon" type="image/png" href="/assets/site/{icon}">
   <link rel="preload" href="/assets/site/font-2.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="preload" href="/assets/site/doto-font.ttf" as="font" type="font/ttf" crossorigin>
   <link rel="stylesheet" href="/assets/site/fonts.css">
-  <link rel="stylesheet" href="/assets/site/site.css">
-  <script src="/assets/site/site.js" defer></script>
+  <link rel="stylesheet" href="/assets/site/site.css?v={ASSET_VERSIONS['site.css']}">
+  <script src="/assets/site/site.js?v={ASSET_VERSIONS['site.js']}" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to content</a>

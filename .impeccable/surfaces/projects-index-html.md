@@ -21,3 +21,16 @@ Content: English; fewer words, concrete product facts. Free photography tools, 7
 The approved working concept is the compositional authority; this is code-led. The catalog CRT/pixel quality bar is only material/motion calibration, not a screenshot fidelity target. No generated comp.
 
 Inherited world: medium-native-crt-arcade-pixel-glow; prior seed adaf7bc5. The user approved the working Pixel Studio concept, then authorized full implementation with raw app screens and no visible motion settings.
+
+## Latest Direction contract — product stages, 2026-10-09
+
+This is an ordinary extension of the approved Pixel Studio. The user's 2026-10-09 rejection of the missing real Tryio icon and insufficient opening impact supersedes earlier hero-preservation, peach Tryio tile and poster-led hero instructions. Earlier contracts above remain historical; this contract governs the finished catalog route. Global DESIGN.md and .impeccable/design.json remain unchanged.
+
+THESIS: Turn the catalog into immediate exhibits of actual product work with clear destinations and honest access status.
+OWN-WORLD: Retain indigo, pale/muted text, Doto emphasis, Onest facts, orange directional actions and broad bordered editorial rows. Authentic Aperto and Tryio identities accompany complete relevant screenshots; the Tryio exhibit uses the original folded blue T and coaching/chat, not the prior pixel wordmark tile.
+STORY: Aperto demonstrates camera controls and learning; Tryio demonstrates practice, feedback and another try; Vairy demonstrates social discovery and a possible first message. Whole-row links open the actual routes. Pending public access belongs to Aperto; Tryio/Vairy are historical archived experiments.
+FIRST VIEWPORT: A shorter “Three apps. One maker.” lead leaves room for the original product exhibits. Whole camera/chat/match screens carry the rows. Desktop/user width gives the first exhibit substantial scale; mobile shows Aperto, Tryio and the beginning of Vairy promptly.
+FORM: Inherit seed adaf7bc5 and the Pixel Studio world. Keep mode Experience, static /projects/, ordinary anchors, broad row hit targets, original image proportions and responsive exhibit/copy/arrow reflow. No new-world roll or generated comp is asserted.
+SIGNATURE: A row wipe, directional arrow and finite source-screen hover transform make each exhibit a clear route action. Status labels distinguish pending beta access from historical cases; no unavailable archived-product CTA is fabricated.
+MOTION: Finite row arrivals and deliberate hover transforms, with OS reduced motion. No perpetual loops, public settings or navigation interception.
+FINISH: Complete for this bounded pass: .impeccable/review/bolder/finish-review.md records disposition ship after all 30 route captures and five action/viewer states were reviewed. verification.md records build/route checks; detector.md discloses the single truncated detector result. All 14 shipping rasters carry embedded provenance; documentation.md confirms the original Tryio icon's unchanged PNG image payload and its use in this exhibit. The incumbent global system remains untouched.

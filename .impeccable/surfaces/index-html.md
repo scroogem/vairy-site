@@ -31,3 +31,16 @@ FIRST VIEWPORT: Keep Aperto title left, real phone right, shutter central. Add t
 SIGNATURE: The GPU lens uses the MIT-licensed Shaders Bulge mapping; native Canvas fallback shares the same photographed scene. Bounded pointer highlights reinforce physical artifacts. All controls also work with keyboard/touch.
 MOTION: On-demand rendering only; GPU textures cached, lens hidden when idle/outside, no time loop. Canvas/shader suspend offscreen/hidden. OS reduced-motion retains states with no spatial animation. No motion settings. No new photographs or claimed product outcomes.
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
+
+## Latest Direction contract — product stages, 2026-10-09
+
+This is an ordinary extension of the approved Pixel Studio. The user's 2026-10-09 rejection of the missing real Tryio icon and insufficient opening impact supersedes earlier hero-preservation, peach Tryio tile and poster-led hero instructions. Earlier contracts above remain historical; this contract governs the finished Aperto route. Global DESIGN.md and .impeccable/design.json remain unchanged.
+
+THESIS: Put a working optical event and the complete real camera in the opening scene.
+OWN-WORLD: Retain the indigo optical ground, Doto display with Onest reading and controls, orange shutter, cyan detail and genuine credited photograph. The visible iris samples the existing photograph; it does not introduce generated imagery.
+STORY: See the photograph through the iris at rest, open it with the shutter, switch the original Camera/Edit/Learn screens and inspect them whole. Follow into manual controls, Natural RAW and practical learning; Aperto's public beta link remains pending.
+FIRST VIEWPORT: Title and promise sit left; a larger complete camera plane sits right. The central shutter and visible native iris establish the optical mechanism before interaction. Mobile retains the photograph, whole camera and screen choices in the opening composition; the actual first-viewport captures govern its layout.
+FORM: Inherit seed adaf7bc5 and the Pixel Studio world. Keep mode Persuade, static route /, ordinary anchors, real screenshot proportions and responsive reflow. No new-world roll or generated comp is asserted.
+SIGNATURE: The shutter opens the original photograph; Camera/Edit/Learn changes genuine app evidence. Keyboard/touch controls and the whole-screen native dialog make the product inspectable.
+MOTION: Finite entrances, pointer/scroll-driven depth and on-demand optical rendering. Suspend hidden/offscreen work and honor OS reduced motion; no public motion settings or navigation interception.
+FINISH: Complete for this bounded pass: .impeccable/review/bolder/finish-review.md records disposition ship after all 30 route captures and five action/viewer states were reviewed. verification.md records build/route checks; detector.md discloses the single truncated detector result. All 14 shipping rasters carry embedded provenance, verified in documentation.md. This route contract records the completed extension without rewriting the incumbent global system or claiming user approval of its emotional effect.
