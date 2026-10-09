@@ -10,13 +10,21 @@
         </div>
         <figure class="hero-device">
           <div class="phone-plane" data-tilt><div class="app-screen"><img id="camera-screen" src="/assets/site/manual.png" width="1320" height="2868" alt="Original Aperto manual-camera interface"></div></div>
-          <figcaption>Actual Aperto interface</figcaption>
+          <figcaption><span id="camera-caption" aria-live="polite">Actual Aperto interface</span><div class="camera-views" role="group" aria-label="Explore Aperto screens" hidden><button data-camera-view="manual" aria-pressed="true">Camera</button><button data-camera-view="editor" aria-pressed="false">Edit</button><button data-camera-view="school" aria-pressed="false">Learn</button></div></figcaption>
         </figure>
         <div class="shutter-control">
           <button id="shutter" aria-label="Reveal the color photograph" aria-pressed="false"><span class="shutter-icon" aria-hidden="true"><svg viewBox="0 0 80 80"><circle cx="40" cy="40" r="29"/><path d="m40 11 17 29-17 29M15 25h34l16 30M15 55l17-30h33"/></svg></span></button>
           <span id="shutter-caption">Open the image</span>
         </div>
         <div class="stage-caption"><span>ISO · Shutter · WB · Focus</span><a href="#beta">Get beta updates<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></a></div><p class="image-credit">Photo study · demo photograph / Unsplash</p>
+      </section>
+
+      <section class="light-study section" hidden>
+        <div class="section-heading"><h2>Find your<br><span>kind of light.</span></h2><p>Move the light. Change the feeling.<br>Try it here.</p></div>
+        <div class="light-workbench">
+          <figure class="light-picture"><img src="/assets/site/mountain.jpg" width="2000" height="2667" loading="lazy" alt="Mountain and lake photograph in the interactive light study"><span class="light-temperature" aria-hidden="true"></span><div class="light-meter" aria-hidden="true"><i></i><i></i><i></i><i></i></div><figcaption>Illustrative light study · photograph / Unsplash</figcaption></figure>
+          <div class="light-controls"><label for="study-exposure">Exposure<output id="exposure-value" for="study-exposure">0.0 EV</output></label><input id="study-exposure" type="range" min="-1.5" max="1.5" step="0.1" value="0"><div class="range-ends" aria-hidden="true"><span>Darker</span><span>Brighter</span></div><label for="study-warmth">Warmth<output id="warmth-value" for="study-warmth">Neutral</output></label><input id="study-warmth" type="range" min="-100" max="100" step="1" value="0"><div class="range-ends" aria-hidden="true"><span>Cool</span><span>Warm</span></div><button class="study-reset" type="button">Reset the light<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 8a8 8 0 1 1-1 7M4 3v5h5"/></svg></button><p>Your eye. Your decision.</p></div>
+        </div>
       </section>
 
       <section id="camera-details" class="camera-details section">

@@ -21,3 +21,13 @@ Content: English; fewer words, concrete product facts. Free photography tools, 7
 The approved working concept is the compositional authority; this is code-led. The catalog CRT/pixel quality bar is only material/motion calibration, not a screenshot fidelity target. No generated comp.
 
 Inherited world: medium-native-crt-arcade-pixel-glow; prior seed adaf7bc5. The user approved the working Pixel Studio concept, then authorized full implementation with raw app screens and no visible motion settings.
+
+## Interactive optical extension, 2026-10-09
+
+THESIS: Let visitors operate the optical scene and inspect the original products. Retain the approved Pixel Studio and all factual copy.
+OWN-WORLD: Indigo optical stage, Doto/Onest, orange shutter, cyan optical detail, lavender portfolio and mint practice. Genuine assets stay whole.
+STORY: A lens follows the pointer; a six-blade iris reveals the photograph. Camera/Edit/Learn switches actual app captures. A light study teaches brightness and warmth through direct manipulation. Original screens enlarge for inspection. Tryio offers two authored next moves with specific coaching.
+FIRST VIEWPORT: Keep Aperto title left, real phone right, shutter central. Add three compact app-screen buttons below the phone, with reserved space. No background overhaul or new top-level menu.
+SIGNATURE: The GPU lens uses the MIT-licensed Shaders Bulge mapping; native Canvas fallback shares the same photographed scene. Bounded pointer highlights reinforce physical artifacts. All controls also work with keyboard/touch.
+MOTION: On-demand rendering only; GPU textures cached, lens hidden when idle/outside, no time loop. Canvas/shader suspend offscreen/hidden. OS reduced-motion retains states with no spatial animation. No motion settings. No new photographs or claimed product outcomes.
+FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
