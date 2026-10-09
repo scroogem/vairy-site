@@ -18,10 +18,13 @@ animate(hero?.querySelector('h1'), [
   {clipPath:'inset(0 0 18% 0)', transform:'translateY(16px)', opacity:.75},
   {clipPath:'inset(0)', transform:'translateY(0)', opacity:1}
 ], 950);
-animate(hero?.querySelector('.hero-device, .product-orbit, .tryio-artifact, .vairy-stage figure'), [
+animate(hero?.querySelector('.hero-device, .product-orbit'), [
   {translate:'0 28px', opacity:.65, filter:'blur(3px)'},
   {translate:'0 0', opacity:1, filter:'blur(0)'}
 ], 1100, 100);
+hero?.querySelectorAll('.practice-plane, .match-plane, .chat-plane').forEach((plane,index)=>{
+  animate(plane,[{clipPath:'inset(0 0 12% 0)',translate:'0 24px',opacity:.65},{clipPath:'inset(0)',translate:'0 0',opacity:1}],1000,index*100);
+});
 
 const entranceObserver = new IntersectionObserver(entries => {
   for (const entry of entries) {
@@ -96,8 +99,8 @@ function initializePhotoStudy() {
   const wash = document.createElement('div');
   wash.className = 'shutter-wash'; wash.setAttribute('aria-hidden','true'); stage.append(wash);
   let width=1, height=1, ratio=1, ready=false, inView=false, frameId=0;
-  let lastTime=0, reveal=0, target=0, hovering=false, focus=0;
-  let pointer={x:.57,y:.49}, current={...pointer};
+  let lastTime=0, reveal=.34, target=.34, hovering=false, focus=0;
+  let pointer={x:.61,y:.48}, current={...pointer};
   const start=performance.now();
   let lens=null, lensStarted=false;
   const lensCanvas=document.createElement('canvas');
@@ -209,11 +212,11 @@ function initializePhotoStudy() {
   },{threshold:.01}).observe(stage);
   document.addEventListener('visibilitychange',schedule);
   shutter.addEventListener('click',()=>{
-    target=target ? 0 : 1;
+    target=target===1 ? .34 : 1;
     if (!motion) reveal=target;
-    shutter.setAttribute('aria-pressed',String(Boolean(target)));
-    shutter.setAttribute('aria-label',target ? 'Return photograph to ASCII' : 'Reveal the color photograph');
-    caption.textContent=target ? 'Back to ASCII' : 'Open the image';
+    shutter.setAttribute('aria-pressed',String(target===1));
+    shutter.setAttribute('aria-label',target===1 ? 'Return to the photo aperture' : 'Reveal the color photograph');
+    caption.textContent=target===1 ? 'Back to aperture' : 'Open the image';
     animate(wash,[{opacity:0},{opacity:.12,offset:.25},{opacity:0}],250);
     draw(performance.now());schedule();
   });
@@ -252,6 +255,15 @@ const replies = {
   followup: {human:'Would you give climbing a try, or is there something else you like doing after work?', partner:'I usually go for a run. Trying climbing could be fun.', coach:'The question follows the shared topic and leaves room for their own interest. Listen for a detail you can explore next.'}
 };
 const replyChoices=document.querySelector('.reply-choices');
+const practiceSpread=document.querySelector('.practice-spread');
+const practiceViews=document.querySelector('.practice-views');
+if(practiceViews) {
+  practiceViews.hidden=false;
+  practiceViews.querySelectorAll('button').forEach(button=>button.addEventListener('click',()=>{
+    practiceSpread.dataset.activeScreen=button.dataset.practiceView;
+    practiceViews.querySelectorAll('button').forEach(item=>item.setAttribute('aria-pressed',String(item===button)));
+  }));
+}
 if (replyChoices) {
   replyChoices.hidden=false;
   replyChoices.querySelectorAll('button').forEach(button=>button.addEventListener('click',()=>{
@@ -329,6 +341,19 @@ reel?.addEventListener('keydown', event => {
   reel.scrollTo({left:next * stride,behavior:'auto'});
 });
 
+// The original interest prompt fills an illustrative composer; it never sends a message.
+const openingChoices=document.querySelector('.opening-choices');
+if(openingChoices) {
+  openingChoices.hidden=false;
+  const prompts={books:'Currently reading what?',gaming:'What are you playing?'};
+  openingChoices.querySelectorAll('button').forEach(button=>button.addEventListener('click',()=>{
+    document.querySelector('#opening-message').textContent=prompts[button.dataset.opening];
+    openingChoices.querySelectorAll('button').forEach(item=>item.setAttribute('aria-pressed',String(item===button)));
+    animate(document.querySelector('.opening-composer'),[{clipPath:'inset(0 8% 0 0)',opacity:.6},{clipPath:'inset(0)',opacity:1}],350);
+    animate(document.querySelector('.match-connection'),[{strokeDasharray:'1000',strokeDashoffset:'1000'},{strokeDasharray:'1000',strokeDashoffset:'0'}],700);
+  }));
+}
+
 // Explore complete original captures; loading is resolved before a screen is switched.
 const cameraViews=document.querySelector('.camera-views');
 if (cameraViews) {
@@ -390,7 +415,7 @@ reducedMotion.addEventListener('change',resetReflections);
 document.addEventListener('visibilitychange',()=>{if(document.hidden)resetReflections();});
 
 // Native dialog protects focus while inspecting complete, unmodified originals.
-const originalScreens=[...document.querySelectorAll('.hero-device img, .editor-phone img, .lesson-phone img, .screen-reel img, .tryio-artifact img, .connection-artifacts img, .vairy-stage figure img')];
+const originalScreens=[...document.querySelectorAll('.hero-device img, .editor-phone img, .lesson-phone img, .screen-reel img, .tryio-artifact img, .connection-artifacts img, .practice-plane img, .match-spread img')];
 if(originalScreens.length) {
   const dialog=document.createElement('dialog');dialog.className='screen-viewer';dialog.setAttribute('aria-labelledby','viewer-caption');
   dialog.innerHTML='<div class="viewer-panel"><div class="viewer-toolbar"><h2 id="viewer-caption"></h2><button class="viewer-close" aria-label="Close screen viewer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div><div class="viewer-navigation"><button class="viewer-prev" aria-label="Previous original screen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5m5-5-5 5 5 5"/></svg></button><span class="viewer-count"></span><button class="viewer-next" aria-label="Next original screen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></button></div></div>';
