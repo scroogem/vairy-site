@@ -99,6 +99,19 @@ function initializePhotoStudy() {
   let lastTime=0, reveal=0, target=0, hovering=false, focus=0;
   let pointer={x:.57,y:.49}, current={...pointer};
   const start=performance.now();
+  let lens=null, lensStarted=false;
+  const lensCanvas=document.createElement('canvas');
+  lensCanvas.className='optical-lens';lensCanvas.setAttribute('aria-hidden','true');lensCanvas.hidden=true;
+  canvas.after(lensCanvas);stage.dataset.lensRenderer='canvas';
+  function startLens() {
+    if (lensStarted || !motion) return;
+    lensStarted=true;
+    import('./optical-lens.js').then(module=>module.createOpticalLens(lensCanvas,photoLayer,()=>{lens=null;lensCanvas.hidden=true;stage.dataset.lensRenderer='canvas';schedule();})).then(result=>{
+      lens=result;
+      if (lens) stage.dataset.lensRenderer='webgpu';
+      schedule();
+    }).catch(()=>{});
+  }
   shutter.disabled = true;
 
   function build() {
@@ -129,6 +142,7 @@ function initializePhotoStudy() {
       paint.fillStyle=`rgb(${Math.round(85+light*126)},${Math.round(117+light*123)},${Math.round(158+light*81)})`;
       paint.fillText(glyphs[index],(x+.5)*width/cols*ratio,(y+.5)*height/rows*ratio);
     }
+    lens?.resize();
     draw(performance.now()); schedule();
   }
   function draw(time) {
@@ -136,14 +150,28 @@ function initializePhotoStudy() {
     context.drawImage(asciiLayer,0,0);
     const cx=current.x*canvas.width, cy=current.y*canvas.height;
     const farthest=Math.hypot(Math.max(cx,canvas.width-cx),Math.max(cy,canvas.height-cy));
-    const radius=reveal*farthest+(1-reveal)*focus*ratio;
+    const radius=reveal*farthest*1.16;
     if (radius>1) {
-      context.save(); context.beginPath(); context.arc(cx,cy,radius,0,Math.PI*2); context.clip();
+      context.save(); context.beginPath();
+      for (let blade=0;blade<6;blade++) {
+        const angle=blade*Math.PI/3+Math.PI/6+(1-reveal)*.3;
+        const x=cx+Math.cos(angle)*radius,y=cy+Math.sin(angle)*radius;
+        blade ? context.lineTo(x,y) : context.moveTo(x,y);
+      }
+      context.closePath();context.clip();
       context.drawImage(photoLayer,0,0); context.restore();
       if (reveal>.01 && reveal<.98) {
-        context.beginPath(); context.arc(cx,cy,radius,0,Math.PI*2);
         context.strokeStyle='#d7e8fc77'; context.lineWidth=ratio; context.stroke();
       }
+    }
+    const inspect=hovering && motion && focus>1;
+    lensCanvas.hidden=!inspect || !lens;
+    if (inspect && lens) lens.draw(current.x,current.y,focus*ratio);
+    else if (inspect) {
+      const size=focus*ratio;
+      context.save();context.beginPath();context.arc(cx,cy,size,0,Math.PI*2);context.clip();
+      context.drawImage(photoLayer,cx-size/1.3,cy-size/1.3,size*2/1.3,size*2/1.3,cx-size,cy-size,size*2,size*2);
+      context.restore();
     }
     const age=time-start;
     if (motion && age<1800 && reveal<.95) {
@@ -161,11 +189,11 @@ function initializePhotoStudy() {
     const pointerRate=motion ? 1-Math.exp(-dt/28) : 1;
     reveal+=(target-reveal)*openRate;
     current.x+=(pointer.x-current.x)*pointerRate; current.y+=(pointer.y-current.y)*pointerRate;
-    focus+=((hovering && motion ? 66 : 0)-focus)*(1-Math.exp(-dt/60));
+    focus+=((hovering && motion ? 82 : 0)-focus)*(1-Math.exp(-dt/60));
     if (Math.abs(target-reveal)<.001) reveal=target;
     draw(time);
     const moving=Math.abs(pointer.x-current.x)+Math.abs(pointer.y-current.y)>.0001;
-    const focusing=Math.abs((hovering && motion ? 66 : 0)-focus)>.1;
+    const focusing=Math.abs((hovering && motion ? 82 : 0)-focus)>.1;
     if (reveal!==target || moving || focusing || (motion && time-start<1800)) schedule();
   }
   function schedule() {if(!frameId && ready && inView && !document.hidden) frameId=requestAnimationFrame(frame);}
@@ -176,6 +204,7 @@ function initializePhotoStudy() {
   new IntersectionObserver(entries=>{
     inView=entries[0].isIntersecting;
     if (!inView && frameId) {cancelAnimationFrame(frameId);frameId=0;lastTime=0;}
+    if (!inView) {hovering=false;lensCanvas.hidden=true;reticle.style.opacity='0';}
     schedule();
   },{threshold:.01}).observe(stage);
   document.addEventListener('visibilitychange',schedule);
@@ -192,6 +221,7 @@ function initializePhotoStudy() {
     if (!motion || event.pointerType==='touch') return;
     const box=stage.getBoundingClientRect();
     pointer={x:(event.clientX-box.left)/width,y:(event.clientY-box.top)/height}; hovering=true;
+    startLens();
     // The focus frame follows the pointer immediately; the photo aperture eases over 28ms.
     reticle.style.transform=`translate(${pointer.x*width-25}px,${pointer.y*height-25}px)`;
     reticle.style.opacity='1';
@@ -199,8 +229,10 @@ function initializePhotoStudy() {
     schedule();
   });
   stage.addEventListener('pointerleave',()=>{
-    hovering=false;reticle.style.opacity='0';stage.querySelector('.phone-plane').style.transform='';schedule();
+    hovering=false;lensCanvas.hidden=true;reticle.style.opacity='0';stage.querySelector('.phone-plane').style.transform='';schedule();
   });
+  document.addEventListener('visibilitychange',()=>{if(document.hidden){hovering=false;lensCanvas.hidden=true;reticle.style.opacity='0';if(frameId)cancelAnimationFrame(frameId);frameId=0;}});
+  addEventListener('pagehide',()=>lens?.destroy(),{once:true});
   return ()=>{reveal=target;hovering=false;focus=0;reticle.style.opacity='0';stage.querySelector('.phone-plane').style.transform='';draw(performance.now());schedule();};
 }
 const resetPhotoMotion=initializePhotoStudy();
@@ -213,21 +245,27 @@ reducedMotion.addEventListener('change',()=>{
   resetPhotoMotion();scheduleScroll();
 });
 
-// Tryio’s illustrative product demonstration.
-let improved = false;
-document.querySelector('#try-next')?.addEventListener('click',() => {
-  improved = !improved;
-  document.querySelector('.human-message').textContent = improved
-    ? 'I tried a new climbing place today. What do you usually do after work?'
-    : 'How’s your day going?';
-  document.querySelector('.coach-message p').textContent = improved
-    ? 'The specific detail gives your partner something to pick up on. Keep the follow-up connected to what they tell you.'
-    : 'Give them a detail to respond to. Try sharing something about your day, then asking about theirs.';
-  document.querySelector('#try-next').firstChild.textContent = improved ? 'Try the original reply' : 'Try a more specific reply';
-  if (motion) document.querySelector('.human-message').animate(
-    [{transform:'translateY(8px)',opacity:.5},{transform:'translateY(0)',opacity:1}],
-    {duration:330,easing:'cubic-bezier(.16,1,.3,1)'});
-});
+// Authored examples show the product loop; they do not call an AI service.
+const replies = {
+  hello: {human:'How’s your day going?', partner:'Hey.', coach:'Give them a detail to respond to. Try sharing something about your day, then asking about theirs.'},
+  detail: {human:'I tried a new climbing place today. It was harder than I expected.', partner:'Oh, nice. I’ve never tried climbing.', coach:'A specific detail gives your partner something to pick up on. Now connect your next question to their reply.'},
+  followup: {human:'Would you give climbing a try, or is there something else you like doing after work?', partner:'I usually go for a run. Trying climbing could be fun.', coach:'The question follows the shared topic and leaves room for their own interest. Listen for a detail you can explore next.'}
+};
+const replyChoices=document.querySelector('.reply-choices');
+if (replyChoices) {
+  replyChoices.hidden=false;
+  replyChoices.querySelectorAll('button').forEach(button=>button.addEventListener('click',()=>{
+    const reply=replies[button.dataset.reply];
+    document.querySelector('.human-message').textContent=reply.human;
+    document.querySelector('.partner-message').textContent=reply.partner;
+    document.querySelector('.coach-message p').textContent=reply.coach;
+    const messages=document.querySelector('#conversation-messages');
+    const human=messages.querySelector('.human-message'),partner=messages.querySelector('.partner-message');
+    messages.prepend(...(button.dataset.reply==='hello'?[partner,human]:[human,partner]));
+    replyChoices.querySelectorAll('button').forEach(item=>item.setAttribute('aria-pressed',String(item===button)));
+    animate(document.querySelector('#conversation-messages'),[{translate:'0 8px',opacity:.6},{translate:'0 0',opacity:1}],330);
+  }));
+}
 
 const decisions = {
   context:{title:'A situation comes first.',description:'A contextual first question leads straight into a short practice session with an opening already in place.',purpose:'A concrete start. Immediate experience of the product.',question:'What feels difficult?',items:['Starting a conversation','Keeping it going','Connecting deeper']},
@@ -258,6 +296,7 @@ if (companion) {
   button.addEventListener('click', () => {
     note.hidden = !note.hidden;
     button.setAttribute('aria-expanded',String(!note.hidden));
+    if (!note.hidden) animate(button.querySelector('svg'),[{rotate:'0deg'},{rotate:'-12deg',offset:.25},{rotate:'10deg',offset:.6},{rotate:'0deg'}],360);
     animate(note,[{opacity:.5,translate:'0 6px'},{opacity:1,translate:'0 0'}],230);
   });
   document.addEventListener('keydown', event => {if (event.key === 'Escape') closeNote();});
@@ -289,3 +328,98 @@ reel?.addEventListener('keydown', event => {
   // Immediate keyboard steps remain deterministic even with repeated keys and Reduce Motion.
   reel.scrollTo({left:next * stride,behavior:'auto'});
 });
+
+// Explore complete original captures; loading is resolved before a screen is switched.
+const cameraViews=document.querySelector('.camera-views');
+if (cameraViews) {
+  const screen=document.querySelector('#camera-screen'), caption=document.querySelector('#camera-caption');
+  const screens={manual:['manual.png','Original Aperto manual-camera interface','Manual camera'],editor:['editor.png','Original Aperto editor with light and color controls','Light & color editor'],school:['school.png','Original Aperto Pro School with seven practical photography lessons','7 practical lessons']};
+  let request=0;
+  cameraViews.hidden=false;
+  cameraViews.querySelectorAll('button').forEach(button=>button.addEventListener('click',()=>{
+    const ticket=++request,[file,alt,label]=screens[button.dataset.cameraView],image=new Image();
+    caption.textContent='Loading screen…';
+    image.onload=()=>{
+      if(ticket!==request)return;
+      screen.src=image.src;screen.alt=alt;screen.closest("button").setAttribute("aria-label",`Inspect original screen: ${alt}`);caption.textContent=label;
+      cameraViews.querySelectorAll('button').forEach(item=>item.setAttribute('aria-pressed',String(item===button)));
+      animate(screen,[{opacity:.45,filter:'blur(2px)'},{opacity:1,filter:'blur(0)'}],280);
+    };
+    image.onerror=()=>{if(ticket===request)caption.textContent='Screen unavailable. Select a view to retry.';};
+    image.src='/assets/site/'+file;
+  }));
+}
+
+// A clearly labelled photographic study, independent of the app's processing.
+const lightStudy=document.querySelector('.light-study');
+if(lightStudy) {
+  const exposure=lightStudy.querySelector('#study-exposure'),warmth=lightStudy.querySelector('#study-warmth');
+  const picture=lightStudy.querySelector('.light-picture'),temperature=lightStudy.querySelector('.light-temperature');
+  function updateLight() {
+    const ev=Number(exposure.value),warm=Number(warmth.value);
+    const tone=warm===0?'Neutral':`${Math.abs(warm)}% ${warm>0?'warm':'cool'}`;
+    picture.style.setProperty('--brightness',String(2**ev));
+    temperature.style.background=warm>0?'#ffab58':'#78bcff';
+    temperature.style.opacity=String(Math.abs(warm)/100*.32);
+    lightStudy.querySelector('#exposure-value').textContent=`${ev>0?'+':''}${ev.toFixed(1)} EV`;
+    lightStudy.querySelector('#warmth-value').textContent=tone;
+    exposure.setAttribute('aria-valuetext',`${ev.toFixed(1)} exposure stops`);warmth.setAttribute('aria-valuetext',tone);
+    lightStudy.querySelector('.study-reset').disabled=ev===0&&warm===0;
+  }
+  lightStudy.hidden=false;
+  exposure.addEventListener('input',updateLight);warmth.addEventListener('input',updateLight);
+  lightStudy.querySelector('.study-reset').addEventListener('click',()=>{exposure.value='0';warmth.value='0';updateLight();});
+  updateLight();
+}
+
+// A local reflection follows input on physical artifacts, then rests.
+const reflectiveSurfaces=[...document.querySelectorAll('.app-screen, .tryio-artifact, .connection-artifacts figure')];
+reflectiveSurfaces.forEach(surface=>{
+  surface.classList.add('reflective-surface');
+  surface.addEventListener('pointermove',event=>{
+    if(!motion||event.pointerType==='touch')return;
+    const box=surface.getBoundingClientRect();
+    surface.style.setProperty('--shine-x',`${(event.clientX-box.left)/box.width*100}%`);
+    surface.style.setProperty('--shine-y',`${(event.clientY-box.top)/box.height*100}%`);
+    surface.classList.add('is-reflecting');
+  },{passive:true});
+  surface.addEventListener('pointerleave',()=>surface.classList.remove('is-reflecting'));
+});
+function resetReflections(){reflectiveSurfaces.forEach(surface=>surface.classList.remove('is-reflecting'));}
+reducedMotion.addEventListener('change',resetReflections);
+document.addEventListener('visibilitychange',()=>{if(document.hidden)resetReflections();});
+
+// Native dialog protects focus while inspecting complete, unmodified originals.
+const originalScreens=[...document.querySelectorAll('.hero-device img, .editor-phone img, .lesson-phone img, .screen-reel img, .tryio-artifact img, .connection-artifacts img, .vairy-stage figure img')];
+if(originalScreens.length) {
+  const dialog=document.createElement('dialog');dialog.className='screen-viewer';dialog.setAttribute('aria-labelledby','viewer-caption');
+  dialog.innerHTML='<div class="viewer-panel"><div class="viewer-toolbar"><h2 id="viewer-caption"></h2><button class="viewer-close" aria-label="Close screen viewer"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18"/></svg></button></div><div class="viewer-navigation"><button class="viewer-prev" aria-label="Previous original screen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M19 12H5m5-5-5 5 5 5"/></svg></button><span class="viewer-count"></span><button class="viewer-next" aria-label="Next original screen"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14m-5-5 5 5-5 5"/></svg></button></div></div>';
+  document.body.append(dialog);
+  const image=document.createElement('img'),prev=dialog.querySelector('.viewer-prev'),next=dialog.querySelector('.viewer-next');
+  image.className='viewer-image';dialog.querySelector('.viewer-navigation').before(image);
+  let selected=0,trigger;
+  function show(index) {
+    selected=Math.max(0,Math.min(originalScreens.length-1,index));
+    const original=originalScreens[selected];
+    image.src=original.currentSrc||original.src;image.alt=original.alt;
+    dialog.querySelector('h2').textContent=original.alt;
+    dialog.querySelector('.viewer-count').textContent=`${selected+1} / ${originalScreens.length}`;
+    prev.disabled=selected===0;next.disabled=selected===originalScreens.length-1;
+  }
+  originalScreens.forEach((original,index)=>{
+    if(original.closest('a,button'))return;
+    const button=document.createElement('button');button.className='screen-expand';button.type='button';
+    button.setAttribute('aria-label',`Inspect original screen: ${original.alt}`);button.setAttribute('aria-haspopup','dialog');
+    original.before(button);button.append(original);
+    button.addEventListener('click',()=>{trigger=button;show(index);dialog.showModal();document.body.classList.add('viewing-screen');});
+  });
+  prev.addEventListener('click',()=>show(selected-1));next.addEventListener('click',()=>show(selected+1));
+  dialog.querySelector('.viewer-close').addEventListener('click',()=>dialog.close());
+  dialog.addEventListener('click',event=>{if(event.target===dialog)dialog.close();});
+  dialog.addEventListener('keydown',event=>{
+    if(!['ArrowLeft','ArrowRight'].includes(event.key))return;
+    event.preventDefault();show(selected+(event.key==='ArrowRight'?1:-1));
+  });
+  dialog.addEventListener('close',()=>{document.body.classList.remove('viewing-screen');trigger?.focus({preventScroll:true});});
+  image.addEventListener('error',()=>{dialog.querySelector('h2').textContent='Screen unavailable. Close and select it again to retry.';});
+}

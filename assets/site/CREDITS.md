@@ -10,3 +10,5 @@
 - `vairy-match.jpg`, `vairy-chat.jpg`: original Vairy app captures from VAIRY/mockups/photo_2026-02-21 21.21.49.jpeg and photo_2026-05-10 21.48.23.jpeg. Historical demo conversations, not testimonials or user results.
 - Onest and Doto: self-hosted font files, licensed under the SIL Open Font License. The corresponding license texts are included alongside the files.
 - No newly AI-generated photography or reconstructed app screenshots. The ASCII study samples the existing photograph in native canvas. The small Claudie companion is authored SVG geometry.
+
+- `optical-lens.js`: lightweight native WebGPU adapter using the Bulge mapping from Shader Effects Inc.'s Shaders 4.0.4 (https://github.com/shader-effects-inc/shaders), MIT; full notice in `Shaders-LICENSE.txt`. The library runtime is not bundled. The lens samples the existing demo photograph; no new image generation or external rendering service.
