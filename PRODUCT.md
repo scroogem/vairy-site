@@ -78,3 +78,13 @@ The user confirmed Tryio was formerly named Talky and supplied original assets i
 Vairy source inspected: Vairy - dating app prod ready full/VairyDatingApp/screens/ChatScreen.js, SwipeScreen.js, PracticeScreen.js, icebreakers.py and app.py/get_icebreakers. Profile context includes interests, distance and relationship intent. The chat loads interest-category questions; selecting a question fills the composer rather than sending automatically. Original February/May 2026 screenshots corroborate the flow. Practice with Coach & Partner existed alongside discovery and messaging. These are implemented product choices, not verified adoption or outcome claims.
 
 The user clarified the requested Claude Code bot is a visual pet/icon. Pending destination clarification, the active website scope is used: a small orange pixel companion called Claudie in reserved header space, a finite arrival walk, cursor-aware eyes and a page-specific note on click. No Claude software session, external AI service or user data transmission. The note contains authored, source-backed page facts. No visible motion settings; operating-system reduced motion is respected. Keyboard arrows move the original-screen reel by one complete screen.
+
+## Release facts supplied by the maker, 2026-10-10
+
+Aperto public TestFlight URL: https://testflight.apple.com/join/huz74u4r. Configure this URL and present Join TestFlight instead of pending beta access.
+
+Tryio is being returned to the App Store. Listing URL: https://apps.apple.com/us/app/tryio-talk-to-anyone/id6773795148. The maker will explicitly confirm availability later; keep its download CTA disabled/absent until then. The Apple listing was accessible on 2026-10-10, which does not establish the new release's availability. The latest status supersedes the earlier closed-project-only framing. Keep the prior acquisition experiment as history.
+
+The maker reports 100+ Tryio users and authorizes this public claim. The definition/time window is not yet established; say 100+ users, without calling them active, paying or retained users or inventing a growth rate.
+
+Tryio source: /Users/maks/Documents/VAIRY/Talky-v1, feature/db-swap. Remote head 043164912363cdc8d4f35dc7708dd18fb8d1cb6f changes README/gitignore only after local base faa1dc750ed41567ffb363016e13263906ff34fc. Local working changes include onboarding, completed-session streaks, funnel events and profile skill stats; these are not proven shipped.
