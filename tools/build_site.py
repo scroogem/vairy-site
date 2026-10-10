@@ -26,7 +26,7 @@ products = json.loads((ROOT/'site/products.json').read_text())
 COMPANION_NOTES = {
     'aperto': 'The real camera interface is on the right. Open the image to switch between ASCII and the photograph.',
     'me': 'Three independent products. Tryio went from idea to App Store, built solo. The cases show the decisions behind the screens.',
-    'projects': 'Each product opens its own page. Public beta links will appear when they are available.',
+    'projects': 'Join Aperto’s TestFlight beta. Tryio is returning to the App Store; explore its product case here.',
     'tryio': 'Tryio started as Talky. Scroll down for the original practice, coaching and session-review screens.',
     'vairy': 'A match is the beginning. The original chat shows interest-based prompts beside the message composer.',
 }
@@ -94,7 +94,7 @@ for page,(filename,route,title,description) in PAGES.items():
     }
     for token,value in replacements.items(): body = body.replace(token,value)
     if products['aperto']['testflight']:
-        body = body.replace('The public TestFlight link is on its way.', 'The public beta is ready to try.').replace('Public beta link pending','TestFlight beta available')
+        body = body.replace('The public TestFlight link is on its way.', 'Join Aperto’s TestFlight beta.').replace('Public beta link pending','TestFlight beta')
     if page == 'projects':
         for name in ('tryio','vairy'):
             if products[name]['testflight']:

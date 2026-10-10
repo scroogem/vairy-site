@@ -1,9 +1,11 @@
 {
   "aperto": {
-    "testflight": null
+    "testflight": "https://testflight.apple.com/join/huz74u4r"
   },
   "tryio": {
-    "testflight": null
+    "testflight": null,
+    "appstore": "https://apps.apple.com/us/app/tryio-talk-to-anyone/id6773795148",
+    "appstore_available": false
   },
   "vairy": {
     "testflight": null
