@@ -9,6 +9,15 @@ button{color:inherit;cursor:pointer}
 img{display:block;max-width:100%;height:auto}
 figure,h1,h2,h3,p{margin:0}
 h1,h2,h3{letter-spacing:-.035em;line-height:1.04;text-wrap:balance}
+/* Align the visible glyph edges of Doto and Onest, not just their text boxes. */
+.hero-copy h1,.tryio-copy h1,.vairy-copy h1{ text-indent:-.013em }
+.hero-copy h1>span{ text-indent:-.079em }
+.tryio-copy h1>span{ text-indent:-.083em }
+.vairy-copy h1>span{ text-indent:0 }
+.maker-heading h1{ text-indent:-.079em }
+.project-stage h1{ text-indent:-.012em }
+.maker-heading h1>span,.project-stage h1>span,.learn-copy h2>span,.light-study h2>span{ text-indent:-.013em }
+.learn-copy h2,.light-study h2{ text-indent:-.079em }
 p{line-height:1.55}
 svg{width:22px;height:22px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round;flex-shrink:0}
 button:focus-visible,a:focus-visible,input:focus-visible,[tabindex]:focus-visible{outline:3px solid var(--orange);outline-offset:5px}

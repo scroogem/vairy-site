@@ -88,3 +88,9 @@ Tryio is being returned to the App Store. Listing URL: https://apps.apple.com/us
 The maker reports 100+ Tryio users and authorizes this public claim. The definition/time window is not yet established; say 100+ users, without calling them active, paying or retained users or inventing a growth rate.
 
 Tryio source: /Users/maks/Documents/VAIRY/Talky-v1, feature/db-swap. Remote head 043164912363cdc8d4f35dc7708dd18fb8d1cb6f changes README/gitignore only after local base faa1dc750ed41567ffb363016e13263906ff34fc. Local working changes include onboarding, completed-session streaks, funnel events and profile skill stats; these are not proven shipped.
+
+## Maker clarification, 2026-10-10
+
+100+ means cumulative historical Tryio users. The servers have been off for a long time and there are no current users to interview. Subscriptions use RevenueCat. The app is rated 13+ and is now available on the App Store; enable the supplied listing link. Listing availability does not establish that the offline AI service is restored. The maker requests the public wording remain simply “100+ users”, without a time qualifier. Keep cumulative-user and offline-service details in the private PRD. Public CTAs say View on App Store rather than promising restored AI service.
+
+Heading refinement: preserve Doto and Onest; optically align mixed-font lines using proportional glyph insets so their visible left edges align at desktop and mobile sizes.
